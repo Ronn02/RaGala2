@@ -33,17 +33,17 @@ const AguinaldoShrine = () => {
 
   return (
     <div className='w-full min-h-screen'>
-      <div className='w-full bg-blue-100 flex justify-center items-center relative'>
+      <div className='w-full flex justify-center items-center relative'>
         {images.length > 1 && (
           <>
             <button
-              className='absolute left-0 top-1/2 transform -translate-y-1/2 p-2 bg-black text-white rounded-l-lg'
+              className='absolute left-0 top-1/2 transform -translate-y-1/2 p-2 bg-black text-white rounded-l-lg opacity-50'
               onClick={handlePrevious}
             >
               &lt;
             </button>
             <button
-              className='absolute right-0 top-1/2 transform -translate-y-1/2 p-2 bg-black text-white rounded-r-lg'
+              className='absolute right-0 top-1/2 transform -translate-y-1/2 p-2 bg-black text-white rounded-r-lg opacity-50'
               onClick={handleNext}
             >
               &gt;
@@ -57,10 +57,10 @@ const AguinaldoShrine = () => {
           onClick={() => handleImageClick(currentImage)}
         />
         {showModal && (
-          <div className='fixed top-0 left-0 w-full h-full flex justify-center items-center bg-black bg-opacity-50'>
-            <div className='relative'>
+          <div className='fixed top-0 left-0 w-full h-full  flex justify-center items-center bg-black bg-opacity-50'>
+            <div className='relative items-center'>
               <img
-                className='max-w-full max-h-full cursor-pointer'
+                className='max-w-full max-h-full md:max-w-[800px] md:max-h-[600px] cursor-pointer'
                 src={currentImage}
                 alt=""
               />
@@ -70,6 +70,22 @@ const AguinaldoShrine = () => {
               >
                 X
               </button>
+              {images.length > 1 && (
+                <>
+                  <button
+                    className='absolute left-0 top-1/2 transform -translate-y-1/2 p-2 bg-black text-white rounded-l-lg opacity-50'
+                    onClick={handlePrevious}
+                  >
+                    &lt;
+                  </button>
+                  <button
+                    className='absolute right-0 top-1/2 transform -translate-y-1/2 p-2 bg-black text-white rounded-r-lg opacity-50'
+                    onClick={handleNext}
+                  >
+                    &gt;
+                  </button>
+                </>
+              )}
             </div>
           </div>
         )}
