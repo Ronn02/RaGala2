@@ -7,6 +7,7 @@ import Reset from "./Reset";
 import FriendProfile from "./FriendProfile";
 import RagalaHome from "./RagalaHome";
 import Cavite from "./Province/Cavite/Cavite";
+import AguinaldoShrine from "./Province/Cavite/Specific/AguinaldoShrine";
 
 const Pages = () => {
   return (
@@ -22,6 +23,7 @@ const Pages = () => {
         ></Route>
         <Route path="/ragalahome" element={<RagalaHome></RagalaHome>}></Route>
         <Route path="/cavite" element={<Cavite></Cavite>}></Route>
+            <Route path="/aguinaldoshrine" element={<AguinaldoShrine></AguinaldoShrine>}></Route>
 
       </Routes>
     </div>

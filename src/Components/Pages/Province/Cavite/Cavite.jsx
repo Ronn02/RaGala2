@@ -5,7 +5,7 @@ import Cavite2 from '../../../../assets/destination/CAVITE/SKYRANCH TAGAYTAY/SKY
 import Cavite1 from '../../../../assets/destination/CAVITE/CORREGIDOR ISLAND/CORREGIDOR ISLAND, CAVITE - 2.jpg';
 import Cavite4 from '../../../../assets/destination/CAVITE/ST. MARY MAGDALENE CHURCH/ST. MARY MAGDALENE CHURCH, CAVITE - 3.jpg';
 import RagalaNavbar from '../../../Navbar/RagalaNavbar';
-
+import { Link } from 'react-router-dom';
 const Cavite = () => {
     return (
         <div className="w-full">
@@ -24,12 +24,12 @@ const Cavite = () => {
                 <div className='flex-col mx-3'>
                     
                     <div className='flex'>
-                        <a href=""><div className='relative h-[200px] w-[150px] pr-1 flex'>
+                        <Link to='/aguinaldoshrine'><div className='relative h-[200px] w-[150px] pr-1 flex'>
                             <img src={Cavite3} alt="" className="object-cover h-full w-full" />
                             <div className="absolute top-0 left-0 h-full w-full flex flex-col justify-end items-end text-black">
                                 <h2 className="text-lg sm:text-3xl font-bold">Aguinaldo Shrine</h2>
                             </div>
-                        </div></a>
+                        </div></Link>
 
                         <a href=""><div className='relative h-[200px] w-[150px] pl-1 flex'>
                             <img src={Cavite2} alt="" className="object-cover h-full w-full" />
