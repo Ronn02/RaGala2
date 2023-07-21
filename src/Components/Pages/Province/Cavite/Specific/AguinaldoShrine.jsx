@@ -90,8 +90,26 @@ const AguinaldoShrine = () => {
           </div>
         )}
       </div>
-      <div className='flex justify-center items-center mt-[10px]'>
+      <div className='flex flex-col items-center mt-4'>
         <h1 className='text-5xl font-bold'>Aguinaldo Shrine</h1>
+        <div className='flex mt-4 space-x-4'>
+          <a
+            href='https://booking-site-url.com' // Replace with the actual booking site URL
+            target='_blank'
+            rel='noopener noreferrer'
+            className='bg-blue-500 text-white px-4 py-2 rounded-md'
+          >
+            Book Now
+          </a>
+          <a
+            href='https://waze.com' // Replace with the actual Waze URL
+            target='_blank'
+            rel='noopener noreferrer'
+            className='bg-green-500 text-white px-4 py-2 rounded-md'
+          >
+            Get Directions (Waze)
+          </a>
+        </div>
       </div>
       <RagalaNavbar />
     </div>
