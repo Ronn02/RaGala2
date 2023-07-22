@@ -111,6 +111,7 @@ const AguinaldoShrine = () => {
           </a>
         </div>
       </div>
+      
       <RagalaNavbar />
     </div>
   );

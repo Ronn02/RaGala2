@@ -9,7 +9,7 @@ const UserLinks = () => {
 
   return (
     <div className="flex justify-center items-center cursor-pointer">
-      <div className="hover:translate-y-1 duration-500 ease-in-out hover:text-blue-500">
+      {/* <div className="hover:translate-y-1 duration-500 ease-in-out hover:text-blue-500">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
@@ -56,7 +56,13 @@ const UserLinks = () => {
             d="M14.857 17.082a23.848 23.848 0 005.454-1.31A8.967 8.967 0 0118 9.75v-.7V9A6 6 0 006 9v.75a8.967 8.967 0 01-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 01-5.714 0m5.714 0a3 3 0 11-5.714 0"
           />
         </svg>
-      </div>
+      </div> */}
+      <p className="ml-4 font-roboto text-sm text-black font-medium no-underline">
+          {user?.displayName === null && userData?.name !== undefined
+            ? userData?.name?.charAt(0)?.toUpperCase() +
+              userData?.name?.slice(1)
+            : user?.displayName?.split(" ")[0]}
+        </p>
       <div className="mx-4 flex items-center" onClick={signOutUser}>
         <Tooltip content="Sign Out" placement="bottom">
           <Avatar
@@ -65,12 +71,7 @@ const UserLinks = () => {
             alt="avatar"
           ></Avatar>
         </Tooltip>
-        <p className="ml-4 font-roboto text-sm text-black font-medium no-underline">
-          {user?.displayName === null && userData?.name !== undefined
-            ? userData?.name?.charAt(0)?.toUpperCase() +
-              userData?.name?.slice(1)
-            : user?.displayName?.split(" ")[0]}
-        </p>
+        
       </div>
     </div>
   );

@@ -3,7 +3,7 @@ import React from "react";
 const Card = ({ name, img, status }) => {
   return (
     <div>
-      <div className="relative">
+      {/* <div className="relative">
         <img
           className="h-80 w-56 rounded-2xl hover:scale-105 duration-700 ease-in-out cursor-pointer shadow-lg"
           src={img}
@@ -21,7 +21,7 @@ const Card = ({ name, img, status }) => {
         >
           {status}
         </p>
-      </div>
+      </div> */}
     </div>
   );
 };

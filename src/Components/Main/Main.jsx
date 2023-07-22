@@ -211,7 +211,7 @@ const Main = () => {
               </Button>
             )}
           </div>
-          <div className="flex items-center">
+          {/* <div className="flex items-center">
             <img className="h-10 mr-4" src={live} alt="live"></img>
             <p className="font-roboto font-medium text-md text-gray-700 no-underline tracking-normal leading-none">
               Live
@@ -222,7 +222,7 @@ const Main = () => {
             <p className="font-roboto font-medium text-md text-gray-700 no-underline tracking-normal leading-none">
               Feeling
             </p>
-          </div>
+          </div> */}
         </div>
       </div>
       <div className="flex flex-col py-4 w-full">
