@@ -110,6 +110,7 @@ const AguinaldoShrine = () => {
             Get Directions (Waze)
           </a>
         </div>
+        <p className='mt-[30px]'>Put the short descriptions here</p> 
       </div>
       
       <RagalaNavbar />

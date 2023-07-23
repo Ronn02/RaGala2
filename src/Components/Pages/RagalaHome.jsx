@@ -11,6 +11,7 @@ import Quezon from '../../assets/destination/QUEZON/CAGBALETE ISLAND/CAGBALETE I
 import { Link} from "react-router-dom";
 import RagalaNavbar from '../Navbar/RagalaNavbar';
 
+
 const RagalaHome = () => {
   return (
     <div name='Ragalahome' className='w-full min-h-screen'>
@@ -61,38 +62,38 @@ const RagalaHome = () => {
       </div></Link>
 
 
-      <a href=""><div className='relative h-[250px] max-w-[350px]  '>
+      <Link to='/laguna'><div className='relative h-[250px] max-w-[350px]  '>
         <img src={Laguna} alt="" className="object-cover h-full w-full" />
         <div className="absolute top-0 left-0 h-full w-full flex flex-col justify-center items-center text-white bg-black bg-opacity-50">
           <h2 className="text-2xl sm:text-3xl font-bold">LAGUNA</h2>
       
         </div>
-      </div></a>
+      </div></Link>
 
 
-      <a href=""><div className='relative h-[250px] max-w-[350px] '>
+      <Link to='/batangas'><div className='relative h-[250px] max-w-[350px] '>
         <img src={Batangas} alt="" className="object-cover h-full w-full" />
         <div className="absolute top-0 left-0 h-full w-full flex flex-col justify-center items-center text-white bg-black bg-opacity-50">
           <h2 className="text-2xl sm:text-3xl font-bold">BATANGAS</h2>
       
         </div>
-      </div></a>
+      </div></Link>
 
-      <a href=""><div className='relative h-[250px] max-w-[350px] '>
+      <Link to='/'><div className='relative h-[250px] max-w-[350px] '>
         <img src={Rizal} alt="" className="object-cover h-full w-full" />
         <div className="absolute top-0 left-0 h-full w-full flex flex-col justify-center items-center text-white bg-black bg-opacity-50">
           <h2 className="text-2xl sm:text-3xl font-bold">RIZAL</h2>
       
         </div>
-      </div></a>
+      </div></Link>
 
-      <a href=""><div className='relative h-[250px] max-w-[350px] '>
+      <Link to='/'><div className='relative h-[250px] max-w-[350px] '>
         <img src={Quezon} alt="" className="object-cover h-full w-full" />
         <div className="absolute top-0 left-0 h-full w-full flex flex-col justify-center items-center text-white bg-black bg-opacity-50">
           <h2 className="text-2xl sm:text-3xl font-bold">QUEZON</h2>
       
         </div>
-      </div></a>
+      </div></Link>
         
       </div>
 

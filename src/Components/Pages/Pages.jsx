@@ -7,7 +7,9 @@ import Reset from "./Reset";
 import FriendProfile from "./FriendProfile";
 import RagalaHome from "./RagalaHome";
 import Cavite from "./Province/Cavite/Cavite";
-import AguinaldoShrine from "./Province/Cavite/Specific/AguinaldoShrine";
+import AguinaldoShrine from "./Province/Cavite/CaviteSpecific/AguinaldoShrine";
+import Batangas from "./Province/Batangas/Batangas";
+import Laguna from "./Province/Laguna/Laguna";
 
 const Pages = () => {
   return (
@@ -24,7 +26,8 @@ const Pages = () => {
         <Route path="/ragalahome" element={<RagalaHome></RagalaHome>}></Route>
         <Route path="/cavite" element={<Cavite></Cavite>}></Route>
             <Route path="/aguinaldoshrine" element={<AguinaldoShrine></AguinaldoShrine>}></Route>
-
+        <Route path="/batangas" element={<Batangas></Batangas>}></Route>
+        <Route path="/laguna" element={<Laguna></Laguna>}></Route>
       </Routes>
     </div>
   );
