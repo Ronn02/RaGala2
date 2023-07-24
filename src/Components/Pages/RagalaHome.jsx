@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef, useState, useEffect, useContext } from "react";
 
 import ToDo from '../../assets/otherAssets/toDoIcon.png';
 import Expenses from '../../assets/otherAssets/expensesIcon.png';
@@ -10,14 +10,24 @@ import Rizal from '../../assets/destination/RIZAL/AVILON ZOO/AVILON ZOO, RIZAL -
 import Quezon from '../../assets/destination/QUEZON/CAGBALETE ISLAND/CAGBALETE ISLAND, QUEZON - 1.jpg';
 import { Link} from "react-router-dom";
 import RagalaNavbar from '../Navbar/RagalaNavbar';
+import { Tooltip } from "@material-tailwind/react";
+import { Avatar } from "@material-tailwind/react";
+import avatar from "../../assets/images/avatar.jpg";
+import { AuthContext } from "../AppContext/AppContext";
+
+
 
 
 const RagalaHome = () => {
+  const { user, userData } = useContext(AuthContext);
+
   return (
     <div name='Ragalahome' className='w-full min-h-screen'>
       <div className='h-[100px] w-full top-0 flex justify-end'>
-        <div className='mr-[30px] mt-[20px] flex justify-center items-center rounded-full overflow-hidden bg-blue-100 h-[70px] w-[70px]'>
-          <p className=''>User Pic</p>
+        <div className='mr-[30px] mt-[20px] flex justify-center items-center rounded-full overflow-hidden h-[70px] w-[70px]'>
+          <Tooltip content="Profile" placement="top">
+            <Avatar size="md" src={user?.photoURL || avatar} alt="avatar" className="rounded-full h-[50px] w-[50px]"></Avatar>
+          </Tooltip>
         </div>
       </div>
 
