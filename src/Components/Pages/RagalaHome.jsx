@@ -14,6 +14,7 @@ import { Tooltip } from "@material-tailwind/react";
 import { Avatar } from "@material-tailwind/react";
 import avatar from "../../assets/images/avatar.jpg";
 import { AuthContext } from "../AppContext/AppContext";
+import PCNavBar from "../Navbar/PCNavBar";
 
 
 
@@ -23,13 +24,8 @@ const RagalaHome = () => {
 
   return (
     <div name='Ragalahome' className='w-full min-h-screen'>
-      <div className='h-[100px] w-full top-0 flex justify-end'>
-        <div className='mr-[30px] mt-[20px] flex justify-center items-center rounded-full overflow-hidden h-[70px] w-[70px]'>
-          <Tooltip content="Profile" placement="top">
-            <Avatar size="md" src={user?.photoURL || avatar} alt="avatar" className="rounded-full h-[50px] w-[50px]"></Avatar>
-          </Tooltip>
-        </div>
-      </div>
+      <PCNavBar></PCNavBar>
+      
 
       <div className='m-[30px] '>
         <h1 className='text-5xl sm:text-6xl font-bold'>Tara Gala?</h1>
