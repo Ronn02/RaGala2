@@ -10,8 +10,8 @@ const Cavite = () => {
     return (
         <div className="w-full">
             <div className='h-[150px] bg-[#FBE470]'>
-                <div className=" h-full w-full flex flex-col justify-end items-start text-black">
-                    <h2 className="ml-3 text-2xl sm:text-3xl font-bold">CAVITE</h2>
+                <div className=" h-full w-full flex flex-col justify-end items-start text-black md:justify-center md:items-center ">
+                    <h2 className="ml-3 text-2xl sm:text-3xl font-bold md:text-5xl">CAVITE</h2>
                 </div>
             </div>
             
