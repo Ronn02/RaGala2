@@ -14,6 +14,7 @@ import {
   where,
 } from 'firebase/firestore';
 import RagalaNavbar from '../Navbar/RagalaNavbar';
+import PCNavBar from '../Navbar/PCNavBar';
 
 const style = {
   container: `max-w-[500px] mt-20 w-full mx-auto rounded-md shadow-xl p-4`,
@@ -134,7 +135,9 @@ const ToDo = () => {
   };
 
   return (
+    <div><PCNavBar></PCNavBar>
     <div className={style.container}>
+      
       <h3 className={style.heading}>To Do List</h3>
       <form onSubmit={createTodo} className={style.form}>
         <input
@@ -194,8 +197,8 @@ const ToDo = () => {
       {todos.length > 0 && (
         <p className={style.count}>{`You have ${todos.length} todos`}</p>
       )}
-      <RagalaNavbar />
-    </div>
+    
+    </div></div>
   );
 };
 
