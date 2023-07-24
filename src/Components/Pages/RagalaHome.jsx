@@ -25,12 +25,12 @@ const RagalaHome = () => {
         <h1 className='text-5xl sm:text-6xl font-bold'>Tara Gala?</h1>
 
         <li className='list-none flex justify-start m-[30px] '>
-          <a href="">
-            <ul className='h-[70px] w-[70px] sm:h-[100px] sm:w-[100px] flex flex-col justify-center items-center m-[2px] sm:m-[10px] p-[10px] border-black border-2 rounded-[20px] hover:bg-[#FBE470]'>
+          <Link to='/todo'>            <ul className='h-[70px] w-[70px] sm:h-[100px] sm:w-[100px] flex flex-col justify-center items-center m-[2px] sm:m-[10px] p-[10px] border-black border-2 rounded-[20px] hover:bg-[#FBE470]'>
               <img src={ToDo} alt='' className='h-[30px] sm:h-[50px] mb-[15px]' />
-              <p className='text-[10px] sm:text-[10px]'>To-D1</p>
+              <p className='text-[10px] sm:text-[10px]'>To-Do</p>
             </ul>
-          </a>
+            </Link>
+
           <a href="">
             <ul className='h-[70px] w-[70px] sm:h-[100px] sm:w-[100px] flex flex-col justify-center items-center m-[2px] sm:m-[10px] p-[10px] border-black border-2 rounded-[20px] hover:bg-[#FBE470]'>
               <img src={Expenses} alt='' className='h-[30px] sm:h-[50px] mb-[15px]' />
