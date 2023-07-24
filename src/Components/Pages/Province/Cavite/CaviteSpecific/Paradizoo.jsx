@@ -91,7 +91,7 @@ const Paradizoo = () => {
         )}
       </div>
       <div className='flex flex-col items-center mt-4'>
-        <h1 className='text-5xl font-bold'>Aguinaldo Shrine</h1>
+        <h1 className='text-5xl font-bold'>Paradizoo</h1>
         <div className='flex mt-4 space-x-4'>
           <a
             href='https://booking-site-url.com' // Replace with the actual booking site URL

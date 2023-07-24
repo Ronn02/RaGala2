@@ -1,14 +1,14 @@
 import React, { useState } from 'react';
 import RagalaNavbar from '../../../../Navbar/RagalaNavbar';
-import SkyRanchTagaytay1 from '../../../../../assets/destination/CAVITE/SKYRANCH TAGAYTAY/SKYRANCH TAGAYTAY, CAVITE - 1.jpg';
-import SkyRanchTagaytay2 from '../../../../../assets/destination/CAVITE/SKYRANCH TAGAYTAY/SKYRANCH TAGAYTAY, CAVITE - 2.jpg';
-import SkyRanchTagaytay3 from '../../../../../assets/destination/CAVITE/SKYRANCH TAGAYTAY/SKYRANCH TAGAYTAY, CAVITE - 3.jpg';
+import AvilonZoo1 from '../../../../../assets/destination/RIZAL/AVILON ZOO/AVILON ZOO, RIZAL - 1.jpg';
+import AvilonZoo2 from '../../../../../assets/destination/RIZAL/AVILON ZOO/AVILON ZOO, RIZAL - 2.jpg';
+import AvilonZoo3 from '../../../../../assets/destination/RIZAL/AVILON ZOO/AVILON ZOO, RIZAL - 3.jpg';
 
-const SkyRanchTagaytay = () => {
-  const [currentImage, setCurrentImage] = useState(SkyRanchTagaytay1);
+const AvilonZoo = () => {
+  const [currentImage, setCurrentImage] = useState(AvilonZoo1);
   const [showModal, setShowModal] = useState(false);
 
-  const images = [SkyRanchTagaytay1, SkyRanchTagaytay2, SkyRanchTagaytay3];
+  const images = [AvilonZoo1, AvilonZoo2, AvilonZoo3];
 
   const handlePrevious = () => {
     const currentIndex = images.indexOf(currentImage);
@@ -91,7 +91,7 @@ const SkyRanchTagaytay = () => {
         )}
       </div>
       <div className='flex flex-col items-center mt-4'>
-        <h1 className='text-5xl font-bold'>Sky Ranch Tagaytay</h1>
+        <h1 className='text-5xl font-bold'>AvilonZoo</h1>
         <div className='flex mt-4 space-x-4'>
           <a
             href='https://booking-site-url.com' // Replace with the actual booking site URL
@@ -118,4 +118,4 @@ const SkyRanchTagaytay = () => {
   );
 };
 
-export default SkyRanchTagaytay;
+export default AvilonZoo;

@@ -79,7 +79,7 @@ const RagalaHome = () => {
         </div>
       </div></Link>
 
-      <Link to='/'><div className='relative h-[250px] max-w-[350px] '>
+      <Link to='/rizal'><div className='relative h-[250px] max-w-[350px] '>
         <img src={Rizal} alt="" className="object-cover h-full w-full" />
         <div className="absolute top-0 left-0 h-full w-full flex flex-col justify-center items-center text-white bg-black bg-opacity-50">
           <h2 className="text-2xl sm:text-3xl font-bold">RIZAL</h2>
@@ -87,7 +87,7 @@ const RagalaHome = () => {
         </div>
       </div></Link>
 
-      <Link to='/'><div className='relative h-[250px] max-w-[350px] '>
+      <Link to='/quezon'><div className='relative h-[250px] max-w-[350px] '>
         <img src={Quezon} alt="" className="object-cover h-full w-full" />
         <div className="absolute top-0 left-0 h-full w-full flex flex-col justify-center items-center text-white bg-black bg-opacity-50">
           <h2 className="text-2xl sm:text-3xl font-bold">QUEZON</h2>

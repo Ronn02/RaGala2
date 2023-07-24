@@ -1,14 +1,14 @@
 import React, { useState } from 'react';
 import RagalaNavbar from '../../../../Navbar/RagalaNavbar';
-import SkyRanchTagaytay1 from '../../../../../assets/destination/CAVITE/SKYRANCH TAGAYTAY/SKYRANCH TAGAYTAY, CAVITE - 1.jpg';
-import SkyRanchTagaytay2 from '../../../../../assets/destination/CAVITE/SKYRANCH TAGAYTAY/SKYRANCH TAGAYTAY, CAVITE - 2.jpg';
-import SkyRanchTagaytay3 from '../../../../../assets/destination/CAVITE/SKYRANCH TAGAYTAY/SKYRANCH TAGAYTAY, CAVITE - 3.jpg';
+import VillaEscuderoResort1 from '../../../../../assets/destination/QUEZON/Villa Escudero Plantations and Resort/Villa Escudero Plantations and Resort2.webp';
+import VillaEscuderoResort2 from '../../../../../assets/destination/QUEZON/Villa Escudero Plantations and Resort/Villa Escudero Plantations and Resort3.webp';
+import VillaEscuderoResort3 from '../../../../../assets/destination/QUEZON/Villa Escudero Plantations and Resort/Villa Escudero Plantations and Resort4.webp';
 
-const SkyRanchTagaytay = () => {
-  const [currentImage, setCurrentImage] = useState(SkyRanchTagaytay1);
+const VillaEscuderoResort = () => {
+  const [currentImage, setCurrentImage] = useState(VillaEscuderoResort1);
   const [showModal, setShowModal] = useState(false);
 
-  const images = [SkyRanchTagaytay1, SkyRanchTagaytay2, SkyRanchTagaytay3];
+  const images = [VillaEscuderoResort1, VillaEscuderoResort2, VillaEscuderoResort3];
 
   const handlePrevious = () => {
     const currentIndex = images.indexOf(currentImage);
@@ -91,7 +91,7 @@ const SkyRanchTagaytay = () => {
         )}
       </div>
       <div className='flex flex-col items-center mt-4'>
-        <h1 className='text-5xl font-bold'>Sky Ranch Tagaytay</h1>
+        <h1 className='text-5xl font-bold'>VillaEscuderoResort</h1>
         <div className='flex mt-4 space-x-4'>
           <a
             href='https://booking-site-url.com' // Replace with the actual booking site URL
@@ -118,4 +118,4 @@ const SkyRanchTagaytay = () => {
   );
 };
 
-export default SkyRanchTagaytay;
+export default VillaEscuderoResort;

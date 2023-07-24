@@ -1,14 +1,14 @@
 import React, { useState } from 'react';
 import RagalaNavbar from '../../../../Navbar/RagalaNavbar';
-import SkyRanchTagaytay1 from '../../../../../assets/destination/CAVITE/SKYRANCH TAGAYTAY/SKYRANCH TAGAYTAY, CAVITE - 1.jpg';
-import SkyRanchTagaytay2 from '../../../../../assets/destination/CAVITE/SKYRANCH TAGAYTAY/SKYRANCH TAGAYTAY, CAVITE - 2.jpg';
-import SkyRanchTagaytay3 from '../../../../../assets/destination/CAVITE/SKYRANCH TAGAYTAY/SKYRANCH TAGAYTAY, CAVITE - 3.jpg';
+import FortuneIsland1 from '../../../../../assets/destination/BATANGAS/FORTUNE ISLAND/FORTUNE ISLAND, BATANGAS - 1.jpg';
+import FortuneIsland2 from '../../../../../assets/destination/BATANGAS/FORTUNE ISLAND/FORTUNE ISLAND, BATANGAS - 2.jpg';
+import FortuneIsland3 from '../../../../../assets/destination/BATANGAS/FORTUNE ISLAND/FORTUNE ISLAND, BATANGAS - 3.png';
 
-const SkyRanchTagaytay = () => {
-  const [currentImage, setCurrentImage] = useState(SkyRanchTagaytay1);
+const FortuneIsland = () => {
+  const [currentImage, setCurrentImage] = useState(FortuneIsland1);
   const [showModal, setShowModal] = useState(false);
 
-  const images = [SkyRanchTagaytay1, SkyRanchTagaytay2, SkyRanchTagaytay3];
+  const images = [FortuneIsland1, FortuneIsland2, FortuneIsland3];
 
   const handlePrevious = () => {
     const currentIndex = images.indexOf(currentImage);
@@ -91,7 +91,7 @@ const SkyRanchTagaytay = () => {
         )}
       </div>
       <div className='flex flex-col items-center mt-4'>
-        <h1 className='text-5xl font-bold'>Sky Ranch Tagaytay</h1>
+        <h1 className='text-5xl font-bold'>FortuneIsland</h1>
         <div className='flex mt-4 space-x-4'>
           <a
             href='https://booking-site-url.com' // Replace with the actual booking site URL
@@ -118,4 +118,4 @@ const SkyRanchTagaytay = () => {
   );
 };
 
-export default SkyRanchTagaytay;
+export default FortuneIsland;

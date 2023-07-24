@@ -1,14 +1,14 @@
 import React, { useState } from 'react';
 import RagalaNavbar from '../../../../Navbar/RagalaNavbar';
-import SkyRanchTagaytay1 from '../../../../../assets/destination/CAVITE/SKYRANCH TAGAYTAY/SKYRANCH TAGAYTAY, CAVITE - 1.jpg';
-import SkyRanchTagaytay2 from '../../../../../assets/destination/CAVITE/SKYRANCH TAGAYTAY/SKYRANCH TAGAYTAY, CAVITE - 2.jpg';
-import SkyRanchTagaytay3 from '../../../../../assets/destination/CAVITE/SKYRANCH TAGAYTAY/SKYRANCH TAGAYTAY, CAVITE - 3.jpg';
+import CaleruegaChurch1 from '../../../../../assets/destination/BATANGAS/CALERUEGA CHURCH/CALERUEGA CHURCH, BATANGAS - 1.jpg';
+import CaleruegaChurch2 from '../../../../../assets/destination/BATANGAS/CALERUEGA CHURCH/CALERUEGA CHURCH, BATANGAS - 2.jpg';
+import CaleruegaChurch3 from '../../../../../assets/destination/BATANGAS/CALERUEGA CHURCH/CALERUEGA CHURCH, BATANGAS - 4.jpg';
 
-const SkyRanchTagaytay = () => {
-  const [currentImage, setCurrentImage] = useState(SkyRanchTagaytay1);
+const CaleruegaChurch = () => {
+  const [currentImage, setCurrentImage] = useState(CaleruegaChurch1);
   const [showModal, setShowModal] = useState(false);
 
-  const images = [SkyRanchTagaytay1, SkyRanchTagaytay2, SkyRanchTagaytay3];
+  const images = [CaleruegaChurch1, CaleruegaChurch2, CaleruegaChurch3];
 
   const handlePrevious = () => {
     const currentIndex = images.indexOf(currentImage);
@@ -91,7 +91,7 @@ const SkyRanchTagaytay = () => {
         )}
       </div>
       <div className='flex flex-col items-center mt-4'>
-        <h1 className='text-5xl font-bold'>Sky Ranch Tagaytay</h1>
+        <h1 className='text-5xl font-bold'>Caleruega Church</h1>
         <div className='flex mt-4 space-x-4'>
           <a
             href='https://booking-site-url.com' // Replace with the actual booking site URL
@@ -118,4 +118,4 @@ const SkyRanchTagaytay = () => {
   );
 };
 
-export default SkyRanchTagaytay;
+export default CaleruegaChurch;
