@@ -24,35 +24,35 @@ const Cavite = () => {
                 <div className='flex-col mx-3'>
                     
                     <div className='flex'>
-                        <Link to='/aguinaldoshrine'><div className='relative h-[200px] w-[150px]  md:h-[300px] md:w-[400px] pr-1 flex'>
+                        <Link to='/labellabotique'><div className='relative h-[200px] w-[150px]  md:h-[300px] md:w-[400px] pr-1 flex'>
                             <img src={Cavite3} alt="" className="object-cover h-full w-full" />
                             <div className="absolute top-0 left-0 h-full w-full flex flex-col justify-end items-end text-black bg-black bg-opacity-20 ">
                                 <h2 className="text-lg sm:text-3xl font-bold text-white">LA BELLA BOTIQUE HOTEL</h2>
                             </div>
                         </div></Link>
 
-                        <a href=""><div className='relative h-[200px] w-[150px] md:h-[300px] md:w-[400px] pl-1 flex'>
+                        <Link to='/skyranchtagaytay'><div className='relative h-[200px] w-[150px] md:h-[300px] md:w-[400px] pl-1 flex'>
                             <img src={Cavite2} alt="" className="object-cover h-full w-full" />
                             <div className="absolute top-0 left-0 h-full w-full flex flex-col justify-end items-center text-black bg-black bg-opacity-20">
                                 <h2 className="text-lg sm:text-3xl font-bold text-white">SKYRANCH TAGAYTAY</h2>
                             </div>
-                        </div></a>
+                        </div></Link>
                     </div>
 
                     <div className='flex mt-5'>
-                        <a href=""><div className='relative h-[200px] w-[150px] md:h-[300px] md:w-[400px] pr-1 flex'>
+                        <Link to='/corregidorisland'><div className='relative h-[200px] w-[150px] md:h-[300px] md:w-[400px] pr-1 flex'>
                                 <img src={Cavite1} alt="" className="object-cover h-full w-full" />
                                 <div className="absolute top-0 left-0 h-full w-full flex flex-col justify-end items-center text-black bg-black bg-opacity-20">
                                     <h2 className="text-lg sm:text-3xl font-bold text-white">CORREGIDOR ISLAND</h2>
                                 </div>
-                            </div></a>
+                            </div></Link>
 
-                        <a href=""><div className='relative h-[200px] w-[150px] md:h-[300px] md:w-[400px] pl-1 flex'>
+                        <Link to='/paradizoo'><div className='relative h-[200px] w-[150px] md:h-[300px] md:w-[400px] pl-1 flex'>
                             <img src={Cavite4} alt="" className="object-cover h-full w-full" />
                             <div className="absolute top-0 left-0 h-full w-full flex flex-col justify-end items-end text-black bg-black bg-opacity-20">
                                 <h2 className="text-lg sm:text-3xl font-bold text-white">PARADIZOO</h2>
                             </div>
-                        </div></a>    
+                        </div>    </Link>
                     </div>
             </div>
         </div>  
