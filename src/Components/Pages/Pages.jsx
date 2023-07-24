@@ -33,6 +33,7 @@ import AtvAdventure from "./Province/Rizal/RizalSpecific/AtvAdventure";
 import AvilonZoo from "./Province/Rizal/RizalSpecific/AvilonZoo";
 import DaranakFalls from "./Province/Rizal/RizalSpecific/DaranakFalls";
 import ToDo from "./ToDo";
+import Expenses from "./Expenses";
 
 
 const Pages = () => {
@@ -82,6 +83,8 @@ const Pages = () => {
             <Route path="/daranakfalls" element={<DaranakFalls></DaranakFalls>}></Route>
 
         <Route path="/todo" element={<ToDo></ToDo>}></Route>
+        <Route path="/expenses" element={<Expenses></Expenses>}></Route>
+
         
 
 
