@@ -31,12 +31,12 @@ const RagalaHome = () => {
             </ul>
             </Link>
 
-          <a href="/expenses">
+          <Link to='/expenses'>
             <ul className='h-[70px] w-[70px] sm:h-[100px] sm:w-[100px] flex flex-col justify-center items-center m-[2px] sm:m-[10px] p-[10px] border-black border-2 rounded-[20px] hover:bg-[#FBE470]'>
               <img src={Expenses} alt='' className='h-[30px] sm:h-[50px] mb-[15px]' />
               <p className='text-[10px] sm:text-[10px]'>Expenses</p>
             </ul>
-          </a>
+            </Link>
           <Link to ='/'>
             <ul className='h-[70px] w-[70px] sm:h-[100px] sm:w-[100px] flex flex-col justify-center items-center m-[2px] sm:m-[10px] p-[10px] border-black border-2 rounded-[20px] hover:bg-[#FBE470]'>
               <img src={Message} alt='' className='h-[30px] sm:h-[50px] mb-[15px]' />
