@@ -16,22 +16,32 @@ import {
 import RagalaNavbar from '../Navbar/RagalaNavbar';
 
 const style = {
-  bg: `h-screen w-screen p-4 bg-gradient-to-r from-[#2F80ED] to-[#1CB5E0]`,
-  container: `bg-slate-100 max-w-[500px] w-full m-auto rounded-md shadow-xl p-4`,
+  container: `max-w-[500px] mt-20 w-full mx-auto rounded-md shadow-xl p-4`,
   heading: `text-3xl font-bold text-center text-gray-800 p-2`,
-  form: `flex justify-between`,
-  input: `border p-2 w-full text-xl`,
+  form: `flex flex-wrap justify-between mt-4`,
+  input: `border p-2 w-full md:w-48 text-xl my-2`,
   button: `border p-4 ml-2 bg-purple-500 text-slate-100`,
   count: `text-center p-2`,
+  task: `flex flex-wrap justify-between bg-gray-100 p-4 my-2 capitalize`,
+  taskCompleted: `flex flex-wrap justify-between bg-slate-400 p-4 my-2 capitalize`,
+  row: `flex items-center`,
+  taskText: `ml-2 cursor-pointer`,
+  taskTextCompleted: `ml-2 cursor-pointer line-through`,
+  deleteButton: `cursor-pointer flex items-center`,
 };
 
 const ToDo = () => {
   const [todos, setTodos] = useState([]);
   const [input, setInput] = useState('');
+  const [category, setCategory] = useState('');
+  const [priority, setPriority] = useState('medium');
+  const [dueDate, setDueDate] = useState('');
+  const [notes, setNotes] = useState('');
 
   const authContext = useContext(AuthContext);
   const { user } = authContext;
 
+  // Function to create a new todo
   const createTodo = async (e) => {
     e.preventDefault();
     if (input === '') {
@@ -43,11 +53,20 @@ const ToDo = () => {
         text: input,
         completed: false,
         userId: user.uid,
+        category,
+        priority,
+        dueDate,
+        notes,
       });
     } else {
       alert('Please log in to add todos.');
     }
+    // Reset input fields after creating a new todo
     setInput('');
+    setCategory('');
+    setPriority('medium');
+    setDueDate('');
+    setNotes('');
   };
 
   useEffect(() => {
@@ -71,35 +90,43 @@ const ToDo = () => {
     };
   }, [user]);
 
+  // Function to toggle completion status of a todo
   const toggleComplete = async (todo) => {
     await updateDoc(doc(db, 'todos', todo.id), {
       completed: !todo.completed,
     });
   };
 
+  // Function to delete a todo
   const deleteTodo = async (id) => {
     await deleteDoc(doc(db, 'todos', id));
   };
 
   const Todo = ({ todo }) => {
     return (
-      <li className={todo.completed ? style.liComplete : style.li}>
+      <li className={todo.completed ? style.taskCompleted : style.task}>
         <div className={style.row}>
           <input
             onChange={() => toggleComplete(todo)}
             type='checkbox'
             checked={todo.completed ? 'checked' : ''}
           />
-          <p
-            onClick={() => toggleComplete(todo)}
-            className={
-              todo.completed ? style.textComplete : style.text
-            }
-          >
-            {todo.text}
-          </p>
+          <div>
+            <p
+              onClick={() => toggleComplete(todo)}
+              className={todo.completed ? style.taskTextCompleted : style.taskText}
+            >
+              {todo.text}
+            </p>
+            <p>Category: {todo.category}</p>
+            <p>Priority: {todo.priority}</p>
+            {todo.dueDate && (
+              <p>Due Date: {new Date(todo.dueDate).toLocaleString()}</p>
+            )}
+            {todo.notes && <p>Notes: {todo.notes}</p>}
+          </div>
         </div>
-        <button onClick={() => deleteTodo(todo.id)}>
+        <button onClick={() => deleteTodo(todo.id)} className={style.deleteButton}>
           <FaRegTrashAlt />
         </button>
       </li>
@@ -107,36 +134,67 @@ const ToDo = () => {
   };
 
   return (
-    <div className={style.bg}>
-      <div className={style.container}>
-        <h3 className={style.heading}>Todo App</h3>
-        <form onSubmit={createTodo} className={style.form}>
-          <input
-            value={input}
-            onChange={(e) => setInput(e.target.value)}
-            className={style.input}
-            type='text'
-            placeholder='Add Todo'
-          />
-          <button className={style.button}>
-            <AiOutlinePlus size={30} />
-          </button>
-        </form>
-        <ul>
-          {todos.map((todo, index) => (
+    <div className={style.container}>
+      <h3 className={style.heading}>To Do List</h3>
+      <form onSubmit={createTodo} className={style.form}>
+        <input
+          value={input}
+          onChange={(e) => setInput(e.target.value)}
+          className={style.input}
+          type='text'
+          placeholder='Add Todo'
+        />
+        <input
+          value={category}
+          onChange={(e) => setCategory(e.target.value)}
+          className={style.input}
+          type='text'
+          placeholder='Category'
+        />
+        <select
+          value={priority}
+          onChange={(e) => setPriority(e.target.value)}
+          className={style.input}
+        >
+          <option value='high'>High Priority</option>
+          <option value='medium'>Medium Priority</option>
+          <option value='low'>Low Priority</option>
+        </select>
+        <input
+          value={dueDate}
+          onChange={(e) => setDueDate(e.target.value)}
+          className={style.input}
+          type='datetime-local'
+        />
+        <input
+          value={notes}
+          onChange={(e) => setNotes(e.target.value)}
+          className={style.input}
+          type='text'
+          placeholder='Notes'
+        />
+        <button className={style.button}>
+          <AiOutlinePlus size={30} />
+        </button>
+      </form>
+      <ul>
+        {todos.length === 0 ? (
+          <p className={style.count}>No todos found</p>
+        ) : (
+          todos.map((todo, index) => (
             <Todo
               key={index}
               todo={todo}
               toggleComplete={toggleComplete}
               deleteTodo={deleteTodo}
             />
-          ))}
-        </ul>
-        {todos.length < 1 ? null : (
-          <p className={style.count}>{`You have ${todos.length} todos`}</p>
+          ))
         )}
-      </div>
-      <RagalaNavbar></RagalaNavbar>
+      </ul>
+      {todos.length > 0 && (
+        <p className={style.count}>{`You have ${todos.length} todos`}</p>
+      )}
+      <RagalaNavbar />
     </div>
   );
 };
