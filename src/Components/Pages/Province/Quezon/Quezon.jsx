@@ -6,12 +6,15 @@ import Quezon1 from '../../../../assets/destination/QUEZON/Villa Escudero Planta
 import Quezon4 from '../../../../assets/destination/QUEZON/Quezon Premier Hotel Lucena/Quezon Premier Hotel Lucena.webp';
 import RagalaNavbar from '../../../Navbar/RagalaNavbar';
 import { Link } from 'react-router-dom';
+import PCNavBar from '../../../Navbar/PCNavBar';
 const Quezon = () => {
     return (    
         <div className="w-full min-h-screen">
-            <div className='h-[150px] bg-[#FBE470]'>
+            <PCNavBar></PCNavBar>
+            <div className=' h-[50px] md:h-[150px] '>
+
                 <div className=" h-full w-full flex flex-col justify-end items-start text-black md:justify-center md:items-center ">
-                    <h2 className="ml-3 text-2xl sm:text-3xl font-bold md:text-5xl">Quezon</h2>
+                    <h2 className="ml-3 text-2xl sm:text-3xl font-bold md:text-5xl">QUEZON</h2>
                 </div>
             </div>
             

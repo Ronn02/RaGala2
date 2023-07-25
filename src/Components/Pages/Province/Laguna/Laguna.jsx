@@ -6,12 +6,15 @@ import Laguna1 from '../../../../assets/destination/LAGUNA/PAGSANJAN FALLS/PAGSA
 import Laguna4 from '../../../../assets/destination/LAGUNA/SPLASH ISLAND/SPLASH ISLAND, LAGUNA - 1.jpg';
 import RagalaNavbar from '../../../Navbar/RagalaNavbar';
 import { Link } from 'react-router-dom';
+import PCNavBar from '../../../Navbar/PCNavBar';
 const Laguna = () => {
     return (    
         <div className="w-full min-h-screen">
-            <div className='h-[150px] bg-[#FBE470]'>
+            <PCNavBar></PCNavBar>
+            <div className=' h-[50px] md:h-[150px] '>
+
                 <div className=" h-full w-full flex flex-col justify-end items-start text-black md:justify-center md:items-center ">
-                    <h2 className="ml-3 text-2xl sm:text-3xl font-bold md:text-5xl">Laguna</h2>
+                    <h2 className="ml-3 text-2xl sm:text-3xl font-bold md:text-5xl">LAGUNA</h2>
                 </div>
             </div>
             

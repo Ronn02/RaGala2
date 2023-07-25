@@ -11,7 +11,8 @@ const Batangas = () => {
     return (    
         <div className="w-full min-h-screen">
             <PCNavBar></PCNavBar>
-            <div className='h-[150px] '>
+            <div className=' h-[50px] md:h-[150px] '>
+            
                 <div className=" h-full w-full flex flex-col justify-end items-start text-black md:justify-center md:items-center ">
                     <h2 className="ml-3 text-2xl sm:text-3xl font-bold md:text-5xl">BATANGAS</h2>
                 </div>
