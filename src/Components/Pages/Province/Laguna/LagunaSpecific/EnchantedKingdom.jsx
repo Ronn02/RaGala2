@@ -3,6 +3,7 @@ import RagalaNavbar from '../../../../Navbar/RagalaNavbar';
 import EnchantedKingdom1 from '../../../../../assets/destination/LAGUNA/ENCHANTED KINGDOM/ENCHANTED KINGDOM, LAGUNA - 1.jpg';
 import EnchantedKingdom2 from '../../../../../assets/destination/LAGUNA/ENCHANTED KINGDOM/ENCHANTED KINGDOM, LAGUNA - 2.jpg';
 import EnchantedKingdom3 from '../../../../../assets/destination/LAGUNA/ENCHANTED KINGDOM/ENCHANTED KINGDOM, LAGUNA - 3.jpg';
+import PCNavBar from '../../../../Navbar/PCNavBar';
 
 const EnchantedKingdom = () => {
   const [currentImage, setCurrentImage] = useState(EnchantedKingdom1);
@@ -32,7 +33,8 @@ const EnchantedKingdom = () => {
   };
 
   return (
-    <div className='w-full min-h-screen'>
+    <div className='w-full min-h-screen md:flex'>
+    <PCNavBar></PCNavBar>
       <div className='w-full flex justify-center items-center relative'>
         {images.length > 1 && (
           <>
@@ -51,7 +53,7 @@ const EnchantedKingdom = () => {
           </>
         )}
         <img
-          className='w-[400px] h-[300px] cursor-pointer'
+          className='w-[400px] md:w-[100vh]  md:h-[100vh] h-[300px]  cursor-pointer'
           src={currentImage}
           alt=""
           onClick={() => handleImageClick(currentImage)}
@@ -90,11 +92,11 @@ const EnchantedKingdom = () => {
           </div>
         )}
       </div>
-      <div className='flex flex-col items-center mt-4'>
-        <h1 className='text-5xl font-bold'>EnchantedKingdom</h1>
+      <div className='flex flex-col items-center justify-center mt-10 mx-3 md:w-[50%] md:mt-[20%] lg:mt-[5%]'>
+        <h1 className='text-5xl font-bold text-center'>Enchanted Kingdom</h1>
         <div className='flex mt-4 space-x-4'>
           <a
-            href='https://booking-site-url.com' // Replace with the actual booking site URL
+            href='https://www.klook.com/en-PH/activity/7350-enchanted-kingdom-laguna-manila/?spm=City.ActivityList%3Aany%3A%3ACityActivitiesFilter%3ACard_LIST&clickId=8ce57adbaa' // Replace with the actual booking site URL
             target='_blank'
             rel='noopener noreferrer'
             className='bg-blue-500 text-white px-4 py-2 rounded-md'
@@ -102,7 +104,8 @@ const EnchantedKingdom = () => {
             Book Now
           </a>
           <a
-            href='https://waze.com' // Replace with the actual Waze URL
+            href='https://www.waze.com/live-map/directions/enchanted-kingdom-enchanted-kingdom-dr-santa-rosa?to=place.w.79364239.793576852.441492
+            ' // Replace with the actual Waze URL
             target='_blank'
             rel='noopener noreferrer'
             className='bg-green-500 text-white px-4 py-2 rounded-md'
@@ -110,7 +113,10 @@ const EnchantedKingdom = () => {
             Get Directions (Waze)
           </a>
         </div>
-        <p className='mt-[30px]'>Put the short descriptions here</p> 
+        <div className='flex w-80 justify-center items-center mt-[30px]'>
+            <p className='mx-3'>Enchanted Kingdom is a theme park with over 200 rides, shows, and attractions. The park is divided into five themed areas: Fantasyland, Frontierland, Spookywoods, Lakeside, and The Boardwalk.
+</p> 
+        </div>
       </div>
       
       <RagalaNavbar />
