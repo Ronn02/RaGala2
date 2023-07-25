@@ -40,7 +40,7 @@ const Batangas = () => {
                     </div>
                     <hr  className='w-[80%] h-2 text-black'/>
                 </div>
-                <hr></hr>
+                
                 <div className='flex-col mx-3 mt-5'>
                     
                     <div className='flex'>
