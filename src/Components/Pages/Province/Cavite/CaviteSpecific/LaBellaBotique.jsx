@@ -3,6 +3,8 @@ import RagalaNavbar from '../../../../Navbar/RagalaNavbar';
 import LaBellaBotique1 from '../../../../../assets/destination/CAVITE/LA BELLA BOTIQUE HOTEL/LA BELLA HOTEL, CAVITE - 1.jpeg';
 import LaBellaBotique2 from '../../../../../assets/destination/CAVITE/LA BELLA BOTIQUE HOTEL/LA BELLA HOTEL, CAVITE - 2.jpg';
 import LaBellaBotique3 from '../../../../../assets/destination/CAVITE/LA BELLA BOTIQUE HOTEL/LA BELLA HOTEL, CAVITE - 3.jpg';
+import PCNavBar from '../../../../Navbar/PCNavBar';
+
 
 const LaBellaBotique = () => {
   const [currentImage, setCurrentImage] = useState(LaBellaBotique1);
@@ -32,8 +34,9 @@ const LaBellaBotique = () => {
   };
 
   return (
-    <div className='w-full min-h-screen'>
-      <div className='w-full flex justify-center items-center relative'>
+    <div className='w-full min-h-screen md:flex'>
+      <PCNavBar></PCNavBar>
+      <div className='w-full md:w-[50%]  flex justify-center items-center relative'>
         {images.length > 1 && (
           <>
             <button
@@ -51,7 +54,7 @@ const LaBellaBotique = () => {
           </>
         )}
         <img
-          className='w-[400px] h-[300px] cursor-pointer'
+          className='w-[400px] md:w-[100vh]  md:h-[100vh] h-[300px]  cursor-pointer'
           src={currentImage}
           alt=""
           onClick={() => handleImageClick(currentImage)}
@@ -90,7 +93,8 @@ const LaBellaBotique = () => {
           </div>
         )}
       </div>
-      <div className='flex flex-col items-center mt-4'>
+      <div className='flex flex-col items-center justify-center mt-10 mx-3 md:w-[50%] md:mt-[20%] lg:mt-[5%]'>
+
         <h1 className='text-5xl font-bold'>La Bella Botique</h1>
         <div className='flex mt-4 space-x-4'>
           <a
@@ -110,7 +114,11 @@ const LaBellaBotique = () => {
             Get Directions (Waze)
           </a>
         </div>
-        <p className='mt-[30px]'>Put the short descriptions here</p> 
+        <div className='flex w-80 justify-center items-center mt-[30px]'>
+
+        <p className='mt-[30px]'>La Bella Boutique Hotel is a charming hotel located in Tagaytay. The hotel has a beautiful garden, a swimming pool, and a restaurant with a view of Taal Lake.
+</p> </div>
+
       </div>
       
       <RagalaNavbar />
