@@ -4,6 +4,7 @@ import DaranakFalls1 from '../../../../../assets/destination/RIZAL/DARANAK FALLS
 import DaranakFalls2 from '../../../../../assets/destination/RIZAL/DARANAK FALLS/DARANAK FALLS, RIZAL - 2.jpg';
 import DaranakFalls3 from '../../../../../assets/destination/RIZAL/DARANAK FALLS/DARANAK FALLS, RIZAL - 3.jpg';
 import PCNavBar from '../../../../Navbar/PCNavBar';
+import StarRating from '../../../StarRating/StarRating';
 
 const DaranakFalls = () => {
   const [currentImage, setCurrentImage] = useState(DaranakFalls1);
@@ -32,6 +33,7 @@ const DaranakFalls = () => {
     setShowModal(false);
   };
 
+  const [userRating, setUserRating] = useState(4.5);
   return (
     <div className='w-full min-h-screen md:flex'>
     <PCNavBar></PCNavBar>
@@ -94,6 +96,8 @@ const DaranakFalls = () => {
       </div>
       <div className='flex flex-col items-center justify-center mt-10 mx-3 md:w-[50%] md:mt-[20%] lg:mt-[5%]'>
         <h1 className='text-5xl font-bold text-center'>DaranakFalls</h1>
+        <StarRating rating={userRating} onChange={setUserRating} />
+
         <div className='flex mt-4 space-x-4'>
           <a
             href='https://www.klook.com/en-PH/activity/56537-tanay-rizal-day-tour-rizal/?aid=825&aff_adid=580752&aff_label1=Tanay%20Rizal%20Day%20Tour%20from%20Manila&aff_label2=Rizal&aff_label3=Philippines&aff_pid=&aff_sid=&utm_medium=affiliate-alwayson&utm_source=non-network&utm_campaign=825&utm_term=&utm_content=&aff_klick_id=41124494115-825-580752-eb6a701

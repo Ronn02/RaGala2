@@ -33,6 +33,7 @@ const QuezonPremierHotel = () => {
     setShowModal(false);
   };
 
+  const [userRating, setUserRating] = useState(4.5);
   return (
     <div className='w-full min-h-screen md:flex'>
     <PCNavBar></PCNavBar>

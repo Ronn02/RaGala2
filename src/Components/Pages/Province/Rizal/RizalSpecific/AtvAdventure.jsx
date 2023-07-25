@@ -4,6 +4,8 @@ import AtvAdventure1 from '../../../../../assets/destination/RIZAL/ATV ADVENTURE
 import AtvAdventure2 from '../../../../../assets/destination/RIZAL/ATV ADVENTURE/ATV ADVENTURE(2).webp';
 import AtvAdventure3 from '../../../../../assets/destination/RIZAL/ATV ADVENTURE/ATV ADVENTURE(3).webp';
 import PCNavBar from '../../../../Navbar/PCNavBar';
+import StarRating from '../../../StarRating/StarRating';
+
 const AtvAdventure = () => {
   const [currentImage, setCurrentImage] = useState(AtvAdventure1);
   const [showModal, setShowModal] = useState(false);
@@ -31,6 +33,7 @@ const AtvAdventure = () => {
     setShowModal(false);
   };
 
+  const [userRating, setUserRating] = useState(4.5);
   return (  
     <div className='w-full min-h-screen md:flex'>
     <PCNavBar></PCNavBar>
@@ -93,6 +96,8 @@ const AtvAdventure = () => {
       </div>
       <div className='flex flex-col items-center justify-center mt-10 mx-3 md:w-[50%] md:mt-[20%] lg:mt-[5%]'>
         <h1 className='text-5xl font-bold text-center'>AtvAdventure</h1>
+        <StarRating rating={userRating} onChange={setUserRating} />
+
         <div className='flex mt-4 space-x-4'>
           <a
             href='https://www.klook.com/en-PH/activity/20314-atv-adventure-rizal-manila/?aid=825&aff_adid=474028&aff_label1=ATV%20Ride%20Experience%20Rizal&aff_label2=Rizal&aff_label3=Philippines&aff_pid=&aff_sid=&utm_medium=affiliate-alwayson&utm_source=non-network&utm_campaign=825&utm_term=&utm_content=&aff_klick_id=41123951077-825-474028-8954b9e' // Replace with the actual booking site URL
