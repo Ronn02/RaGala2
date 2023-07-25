@@ -115,7 +115,7 @@ const VillaEscuderoResort = () => {
           </a>
         </div>
         <div className='flex w-80 justify-center items-center mt-[30px]'>
-            <p className='mx-3'>Put the short descriptions here</p> 
+            <p className='mx-3'>Welcome to Villa Escudero Resort, a haven of cultural immersion and natural splendor located in Tiaong, Quezon, Philippines. Set amidst lush coconut plantations, this unique and enchanting resort offers a blend of rich Filipino heritage, warm hospitality, and picturesque landscapes. Experience a harmonious balance of relaxation, recreation, and cultural discovery at Villa Escudero, making it an ideal destination for travelers seeking an authentic and unforgettable experience.</p> 
         </div>
       </div>
       
