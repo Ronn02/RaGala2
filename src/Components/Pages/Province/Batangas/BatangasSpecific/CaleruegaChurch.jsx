@@ -3,6 +3,7 @@ import RagalaNavbar from '../../../../Navbar/RagalaNavbar';
 import CaleruegaChurch1 from '../../../../../assets/destination/BATANGAS/CALERUEGA CHURCH/CALERUEGA CHURCH, BATANGAS - 1.jpg';
 import CaleruegaChurch2 from '../../../../../assets/destination/BATANGAS/CALERUEGA CHURCH/CALERUEGA CHURCH, BATANGAS - 2.jpg';
 import CaleruegaChurch3 from '../../../../../assets/destination/BATANGAS/CALERUEGA CHURCH/CALERUEGA CHURCH, BATANGAS - 4.jpg';
+import PCNavBar from '../../../../Navbar/PCNavBar';
 
 const CaleruegaChurch = () => {
   const [currentImage, setCurrentImage] = useState(CaleruegaChurch1);
@@ -32,8 +33,9 @@ const CaleruegaChurch = () => {
   };
 
   return (
-    <div className='w-full min-h-screen'>
-      <div className='w-full flex justify-center items-center relative'>
+    <div className='w-full min-h-screen md:flex'>
+      <PCNavBar></PCNavBar>
+      <div className='w-full md:w-[50%] flex justify-center items-center relative'>
         {images.length > 1 && (
           <>
             <button
@@ -90,7 +92,7 @@ const CaleruegaChurch = () => {
           </div>
         )}
       </div>
-      <div className='flex flex-col items-center mt-4'>
+      <div className='flex flex-col items-center md:mt-[20%]'>
         <h1 className='text-5xl font-bold'>Caleruega Church</h1>
         <div className='flex mt-4 space-x-4'>
           <a
