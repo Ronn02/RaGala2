@@ -98,7 +98,7 @@ const LaBellaBotique = () => {
         <h1 className='text-5xl font-bold'>La Bella Botique</h1>
         <div className='flex mt-4 space-x-4'>
           <a
-            href='https://booking-site-url.com' // Replace with the actual booking site URL
+            href=' https://www.klook.com/en-PH/hotels/detail/570156-la-bella-boutique-hotel/?spm=SearchResult.SearchResult_LIST&clickId=3cb5399342' // Replace with the actual booking site URL
             target='_blank'
             rel='noopener noreferrer'
             className='bg-blue-500 text-white px-4 py-2 rounded-md'
@@ -106,7 +106,7 @@ const LaBellaBotique = () => {
             Book Now
           </a>
           <a
-            href='https://waze.com' // Replace with the actual Waze URL
+            href='https://www.waze.com/live-map/directions/ph/calabarzon/tagaytay/la-bella-boutique-hotel?to=place.ChIJA2FvEcR3vTMR3DPnbfABSkA' // Replace with the actual Waze URL
             target='_blank'
             rel='noopener noreferrer'
             className='bg-green-500 text-white px-4 py-2 rounded-md'
