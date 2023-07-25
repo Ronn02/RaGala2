@@ -124,7 +124,7 @@ const PostCard = ({ uid, id, logo, name, email, text, image, timestamp }) => {
 
           <div className="flex flex-col ml-4">
             <p className=" py-2 font-roboto font-medium text-sm text-gray-700 no-underline tracking-normal leading-none">
-              {email}
+              {name}
             </p>
             <p className=" font-roboto font-medium text-sm text-gray-700 no-underline tracking-normal leading-none">
               Published: {timestamp}
