@@ -3,6 +3,7 @@ import RagalaNavbar from '../../../../Navbar/RagalaNavbar';
 import aguinaldoshrine1 from '../../../../../assets/destination/LAGUNA/HIDDEN VALLEY SPRINGS/HIDDEN VALLEY SPRINGS, LAGUNA - 1.jpg';
 import aguinaldoshrine2 from '../../../../../assets/destination/LAGUNA/HIDDEN VALLEY SPRINGS/HIDDEN VALLEY SPRINGS, LAGUNA - 2.jpg';
 import aguinaldoshrine3 from '../../../../../assets/destination/LAGUNA/HIDDEN VALLEY SPRINGS/HIDDEN VALLEY SPRINGS, LAGUNA - 4.jpg';
+import PCNavBar from '../../../../Navbar/PCNavBar';
 
 const HiddenValleySprings = () => {
   const [currentImage, setCurrentImage] = useState(aguinaldoshrine1);
@@ -32,7 +33,8 @@ const HiddenValleySprings = () => {
   };
 
   return (
-    <div className='w-full min-h-screen'>
+    <div className='w-full min-h-screen md:flex'>
+    <PCNavBar></PCNavBar>
       <div className='w-full flex justify-center items-center relative'>
         {images.length > 1 && (
           <>
@@ -51,7 +53,7 @@ const HiddenValleySprings = () => {
           </>
         )}
         <img
-          className='w-[400px] h-[300px] cursor-pointer'
+          className='w-[400px] md:w-[100vh]  md:h-[100vh] h-[300px]  cursor-pointer'
           src={currentImage}
           alt=""
           onClick={() => handleImageClick(currentImage)}
@@ -90,11 +92,11 @@ const HiddenValleySprings = () => {
           </div>
         )}
       </div>
-      <div className='flex flex-col items-center mt-4'>
-        <h1 className='text-5xl font-bold'>HiddenValleySprings</h1>
+      <div className='flex flex-col items-center justify-center mt-10 mx-3 md:w-[50%] md:mt-[20%] lg:mt-[5%]'>
+        <h1 className='text-5xl font-bold text-center'>Hidden Valley Springs</h1>
         <div className='flex mt-4 space-x-4'>
           <a
-            href='https://booking-site-url.com' // Replace with the actual booking site URL
+            href='https://www.klook.com/en-PH/activity/10562-hidden-valley-springs-private-day-tour-manila/' // Replace with the actual booking site URL
             target='_blank'
             rel='noopener noreferrer'
             className='bg-blue-500 text-white px-4 py-2 rounded-md'
@@ -102,7 +104,7 @@ const HiddenValleySprings = () => {
             Book Now
           </a>
           <a
-            href='https://waze.com' // Replace with the actual Waze URL
+            href=' https://www.waze.com/live-map/directions/ph/calabarzon/calauan/hidden-valley-springs?to=place.ChIJZ4UWaYtnvTMRh6yjywSpqW8' // Replace with the actual Waze URL
             target='_blank'
             rel='noopener noreferrer'
             className='bg-green-500 text-white px-4 py-2 rounded-md'
@@ -110,7 +112,10 @@ const HiddenValleySprings = () => {
             Get Directions (Waze)
           </a>
         </div>
-        <p className='mt-[30px]'>Put the short descriptions here</p> 
+        <div className='flex w-80 justify-center items-center mt-[30px]'>
+            <p className='mx-3'>Hidden Valley Springs is a natural spring park with a variety of swimming pools, waterfalls, and lagoons. You can also enjoy the park's restaurants, picnic areas, and zipline.
+</p> 
+        </div>
       </div>
       
       <RagalaNavbar />

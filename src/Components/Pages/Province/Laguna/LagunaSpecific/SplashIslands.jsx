@@ -3,6 +3,7 @@ import RagalaNavbar from '../../../../Navbar/RagalaNavbar';
 import SplashIslands1 from '../../../../../assets/destination/LAGUNA/SPLASH ISLAND/SPLASH ISLAND, LAGUNA - 1.jpg';
 import SplashIslands2 from '../../../../../assets/destination/LAGUNA/SPLASH ISLAND/SPLASH ISLAND, LAGUNA - 2.jpg';
 import SplashIslands3 from '../../../../../assets/destination/LAGUNA/SPLASH ISLAND/SPLASH ISLAND, LAGUNA - 4.jpg';
+import PCNavBar from '../../../../Navbar/PCNavBar';
 
 const SplashIslands = () => {
   const [currentImage, setCurrentImage] = useState(SplashIslands1);
@@ -32,7 +33,8 @@ const SplashIslands = () => {
   };
 
   return (
-    <div className='w-full min-h-screen'>
+    <div className='w-full min-h-screen md:flex'>
+    <PCNavBar></PCNavBar>
       <div className='w-full flex justify-center items-center relative'>
         {images.length > 1 && (
           <>
@@ -51,7 +53,7 @@ const SplashIslands = () => {
           </>
         )}
         <img
-          className='w-[400px] h-[300px] cursor-pointer'
+          className='w-[400px] md:w-[100vh]  md:h-[100vh] h-[300px]  cursor-pointer'
           src={currentImage}
           alt=""
           onClick={() => handleImageClick(currentImage)}
@@ -90,11 +92,11 @@ const SplashIslands = () => {
           </div>
         )}
       </div>
-      <div className='flex flex-col items-center mt-4'>
-        <h1 className='text-5xl font-bold'>SplashIslands</h1>
+      <div className='flex flex-col items-center justify-center mt-10 mx-3 md:w-[50%] md:mt-[20%] lg:mt-[5%]'>
+        <h1 className='text-5xl font-bold text-center'>Splash Islands</h1>
         <div className='flex mt-4 space-x-4'>
           <a
-            href='https://booking-site-url.com' // Replace with the actual booking site URL
+            href='https://www.klook.com/en-PH/activity/10662-splash-island-ticket-laguna-manila/?gclid=Cj0KCQjwk96lBhDHARIsAEKO4xb45ofx9GGEJCpm09_6wFnVxAz33qEbSvLemNRCn6q17xYQBw76RecaAgypEALw_wcB&gclsrc=aw.ds' // Replace with the actual booking site URL
             target='_blank'
             rel='noopener noreferrer'
             className='bg-blue-500 text-white px-4 py-2 rounded-md'
@@ -102,7 +104,8 @@ const SplashIslands = () => {
             Book Now
           </a>
           <a
-            href='https://waze.com' // Replace with the actual Waze URL
+            href='https://www.waze.com/live-map/directions/splash-island-southwoods-ave-binan?to=place.w.79364239.793380249.483426
+            ' // Replace with the actual Waze URL
             target='_blank'
             rel='noopener noreferrer'
             className='bg-green-500 text-white px-4 py-2 rounded-md'
@@ -110,7 +113,9 @@ const SplashIslands = () => {
             Get Directions (Waze)
           </a>
         </div>
-        <p className='mt-[30px]'>Put the short descriptions here</p> 
+        <div className='flex w-80 justify-center items-center mt-[30px]'>
+            <p className='mx-3'>Put the short descriptions here</p> 
+        </div>
       </div>
       
       <RagalaNavbar />
