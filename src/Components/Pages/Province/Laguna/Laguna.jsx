@@ -7,15 +7,17 @@ import Laguna4 from '../../../../assets/destination/LAGUNA/SPLASH ISLAND/SPLASH 
 import RagalaNavbar from '../../../Navbar/RagalaNavbar';
 import { Link } from 'react-router-dom';
 import PCNavBar from '../../../Navbar/PCNavBar';
+import LagunaBG from '../../../../assets/destination/LAGUNA/LAGUNA BG.jpg';
 const Laguna = () => {
     return (    
         <div className="w-full min-h-screen">
             <PCNavBar></PCNavBar>
-            <div className=' h-[50px] md:h-[150px] '>
-
-                <div className=" h-full w-full flex flex-col justify-end items-start text-black md:justify-center md:items-center ">
-                    <h2 className="ml-3 text-2xl sm:text-3xl font-bold md:text-5xl">LAGUNA</h2>
-                </div>
+            <div className='  h-[75vh] w-full flex justify-center items-center' ><img src={LagunaBG} alt="" className="object-cover h-[100vh] w-full" />
+            <div className="absolute top-0 left-0 h-[102vh] md:h-[107vh] w-full flex flex-col justify-center items-center text-white bg-black bg-opacity-20">
+                <h2 className="ml-3 text-5xl font-bold md:text-8xl">LAGUNA</h2>
+                <a href="#places" className='text-l md:text-2xl mt-[50px] md:hover:underline'> View Destinations</a>
+                
+            </div>
             </div>
             
         <div className='w-full h-3/4 flex flex-col justify-center items-center mb-[100px]'>
