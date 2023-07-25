@@ -114,7 +114,7 @@ const SplashIslands = () => {
           </a>
         </div>
         <div className='flex w-80 justify-center items-center mt-[30px]'>
-            <p className='mx-3'>Put the short descriptions here</p> 
+            <p className='mx-3'>Splash Island is a water park with a variety of water slides, a wave pool, and a lazy river. You can also enjoy the park's restaurants, picnic areas, and arcade.</p> 
         </div>
       </div>
       
