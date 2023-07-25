@@ -4,12 +4,17 @@ import Batangas3 from '../../../../assets/destination/BATANGAS/CALERUEGA CHURCH/
 import Batangas2 from '../../../../assets/destination/BATANGAS/PADRE PIO NATIONAL SHRINE/PADRE PIO NATIONAL SHRINE, BATANAGAS - 3.jpg';
 import Batangas1 from '../../../../assets/destination/BATANGAS/FORTUNE ISLAND/FORTUNE ISLAND, BATANGAS - 1.jpg';
 import Batangas4 from '../../../../assets/destination/BATANGAS/MINOR BASILICA OF ST. MARTIN OF TOURS/TAAL BASILICA, BATANGAS - 2.png';
+// import BatangasB from '../../../../assets/destination/BATANGAS/CALERUEGA CHURCH/CALERUEGA CHURCH, BATANGAS - 1.jpg';
 import RagalaNavbar from '../../../Navbar/RagalaNavbar';
 import { Link } from 'react-router-dom';
+// import PCNavBar from "../Navbar/PCNavBar";
 const Batangas = () => {
+ 
     return (    
         <div className="w-full min-h-screen">
+              
             <div className='h-[150px] bg-[#FBE470]'>
+                {/* <img src={BatangasB} alt='' className='lg:h-90' /> */}
                 <div className=" h-full w-full flex flex-col justify-end items-start text-black md:justify-center md:items-center ">
                     <h2 className="ml-3 text-2xl sm:text-3xl font-bold md:text-5xl">Batangas</h2>
                 </div>
