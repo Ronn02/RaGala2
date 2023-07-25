@@ -136,7 +136,7 @@ const Main = () => {
           type: SUBMIT_POST,
           posts: doc?.docs?.map((item) => item?.data()),
         });
-        scrollRef?.current?.scrollIntoView({ behavior: "smooth" });
+        
         setImage(null);
         setFile(null);
         setProgressBar(0);
@@ -255,7 +255,7 @@ const Main = () => {
           </div>
         )}
       </div>
-      <div ref={scrollRef}>{/* refference for later */}</div>
+      
     </div>
   );
 };
