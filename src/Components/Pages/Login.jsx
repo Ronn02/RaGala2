@@ -14,6 +14,7 @@ import * as Yup from "yup";
 import ClipLoader from "react-spinners/ClipLoader";
 import { AuthContext } from "../AppContext/AppContext";
 import { auth, onAuthStateChanged } from "../firebase/firebase";
+import logo from '../../assets/otherAssets/logo2.png'
 
 const Login = () => {
   const [loading, setLoading] = useState(false);
@@ -69,8 +70,9 @@ const Login = () => {
           <ClipLoader color="#367fd6" size={150} speedMultiplier={0.5} />
         </div>
       ) : (
-        <div className="grid grid-cols-1 h-screen justify-items-center items-center bg-[#FBE470]">
-          <Card className="w-96">
+        <div className="flex flex-col min-h-screen justify-center items-center  bg-[#FBE470]">
+          <img src={logo} alt=""  className="h-[200px] "/>
+          <Card className="w-96 mb-[30px]">
             <CardHeader
               variant="gradient"
               color="blue"
