@@ -3,6 +3,7 @@ import RagalaNavbar from '../../../../Navbar/RagalaNavbar';
 import Paradizoo1 from '../../../../../assets/destination/CAVITE/PARADIZOO/PARADIZOO, CAVITE - 1.jpg';
 import Paradizoo2 from '../../../../../assets/destination/CAVITE/PARADIZOO/PARADIZOO, CAVITE - 2.jpg';
 import Paradizoo3 from '../../../../../assets/destination/CAVITE/PARADIZOO/PARADIZOO, CAVITE - 3.jpg';
+import PCNavBar from '../../../../Navbar/PCNavBar';
 
 const Paradizoo = () => {
   const [currentImage, setCurrentImage] = useState(Paradizoo1);
@@ -32,8 +33,9 @@ const Paradizoo = () => {
   };
 
   return (
-    <div className='w-full min-h-screen'>
-      <div className='w-full flex justify-center items-center relative'>
+    <div className='w-full min-h-screen md:flex'>
+      <PCNavBar></PCNavBar>
+      <div className='w-full md:w-[50%]  flex justify-center items-center relative'>
         {images.length > 1 && (
           <>
             <button
@@ -51,7 +53,8 @@ const Paradizoo = () => {
           </>
         )}
         <img
-          className='w-[400px] h-[300px] cursor-pointer'
+          className='w-[400px] md:w-[100vh]  md:h-[100vh] h-[300px]  cursor-pointer'
+
           src={currentImage}
           alt=""
           onClick={() => handleImageClick(currentImage)}
@@ -90,11 +93,12 @@ const Paradizoo = () => {
           </div>
         )}
       </div>
-      <div className='flex flex-col items-center mt-4'>
+      <div className='flex flex-col items-center justify-center mt-10 mx-3 md:w-[50%] md:mt-[20%] lg:mt-[5%]'>
+
         <h1 className='text-5xl font-bold'>Paradizoo</h1>
         <div className='flex mt-4 space-x-4'>
           <a
-            href='https://booking-site-url.com' // Replace with the actual booking site URL
+            href='https://www.klook.com/en-PH/activity/13424-paradizoo-admission-ticket-tagaytay-manila/?spm=SearchResult.SearchResult_LIST&clickId=01fd2ccaf9' // Replace with the actual booking site URL
             target='_blank'
             rel='noopener noreferrer'
             className='bg-blue-500 text-white px-4 py-2 rounded-md'
@@ -102,7 +106,7 @@ const Paradizoo = () => {
             Book Now
           </a>
           <a
-            href='https://waze.com' // Replace with the actual Waze URL
+            href='https://www.waze.com/live-map/directions/paradizoo-mendez?to=place.w.79233165.792331653.1003817' // Replace with the actual Waze URL
             target='_blank'
             rel='noopener noreferrer'
             className='bg-green-500 text-white px-4 py-2 rounded-md'
@@ -110,7 +114,9 @@ const Paradizoo = () => {
             Get Directions (Waze)
           </a>
         </div>
-        <p className='mt-[30px]'>Put the short descriptions here</p> 
+        <div className='flex w-80 justify-center items-center mt-[30px]'>
+
+        <p className='mt-[30px]'>Paradizoo is a zoo and theme park with over 1,000 animals from around the world. You can also enjoy the park's rides, shows, and water park.</p> </div>
       </div>
       
       <RagalaNavbar />

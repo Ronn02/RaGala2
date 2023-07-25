@@ -5,11 +5,13 @@ import Cavite2 from '../../../../assets/destination/CAVITE/SKYRANCH TAGAYTAY/SKY
 import Cavite1 from '../../../../assets/destination/CAVITE/CORREGIDOR ISLAND/CORREGIDOR ISLAND, CAVITE - 2.jpg';
 import Cavite4 from '../../../../assets/destination/CAVITE/PARADIZOO/PARADIZOO, CAVITE - 1.jpg';
 import RagalaNavbar from '../../../Navbar/RagalaNavbar';
+import PCNavBar from '../../../Navbar/PCNavBar'
 import { Link } from 'react-router-dom';
 const Cavite = () => {
     return (    
         <div className="w-full min-h-screen">
-            <div className='h-[150px] bg-[#FBE470]'>
+            <PCNavBar></PCNavBar>
+            <div className=' h-[50px] md:h-[150px] '>
                 <div className=" h-full w-full flex flex-col justify-end items-start text-black md:justify-center md:items-center ">
                     <h2 className="ml-3 text-2xl sm:text-3xl font-bold md:text-5xl">CAVITE</h2>
                 </div>

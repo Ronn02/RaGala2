@@ -20,7 +20,7 @@ const style = {
   heading: `text-3xl font-bold text-center text-gray-800 p-2`,
   form: `flex flex-wrap justify-between mt-4`,
   input: `border p-2 w-full md:w-48 text-xl my-2`,
-  button: `border p-4 ml-2 bg-purple-500 text-slate-100`,
+  button: `border p-4 ml-2 bg-[#6F87BE] text-white`,
   count: `text-center p-2`,
   expense: `flex flex-wrap justify-between bg-gray-100 p-4 my-2 capitalize`,
   row: `flex items-center`,
