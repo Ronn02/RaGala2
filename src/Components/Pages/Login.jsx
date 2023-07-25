@@ -75,8 +75,8 @@ const Login = () => {
           <Card className="w-96 mb-[30px]">
             <CardHeader
               variant="gradient"
-              color="blue"
-              className="mb-4 grid h-28 place-items-center"
+              
+              className="mb-4 grid h-28 place-items-center bg-[#1D5D9B]"
             >
               <Typography variant="h3" color="white">
                 LOGIN
@@ -117,9 +117,9 @@ const Login = () => {
                   </div>
                 </div>
                 <Button
-                  variant="gradient"
+                  
                   fullWidth
-                  className="mb-4"
+                  className='bg-[#1D5D9B] mb-4'
                   type="submit"
                 >
                   Login
@@ -128,22 +128,22 @@ const Login = () => {
             </CardBody>
             <CardFooter className="pt-0">
               <Button
-                variant="gradient"
+                className='bg-[#1D5D9B] mb-4'
                 fullWidth
-                className="mb-4"
+                
                 onClick={signInWithGoogle}
               >
                 Sign In with Google
               </Button>
               <Link to="/reset">
-                <p className="ml-1 font-bold font-roboto text-sm text-blue-500 text-center ">
+                <p className="ml-1 font-bold font-roboto text-sm text-[#1D5D9B] text-center ">
                   Reset the password
                 </p>
               </Link>
               <div className="mt-6 flex items-center font-roboto text-base justify-center">
                 Don't have an account?
                 <Link to="/register">
-                  <p className="ml-1 font-bold font-roboto text-sm text-blue-500 text-center ">
+                  <p className="ml-1 font-bold font-roboto text-sm text-[#1D5D9B] text-center ">
                     Register
                   </p>
                 </Link>
