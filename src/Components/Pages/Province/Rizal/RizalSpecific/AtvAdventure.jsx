@@ -3,7 +3,7 @@ import RagalaNavbar from '../../../../Navbar/RagalaNavbar';
 import AtvAdventure1 from '../../../../../assets/destination/RIZAL/ATV ADVENTURE/ATV ADVENTURE(1).webp';
 import AtvAdventure2 from '../../../../../assets/destination/RIZAL/ATV ADVENTURE/ATV ADVENTURE(2).webp';
 import AtvAdventure3 from '../../../../../assets/destination/RIZAL/ATV ADVENTURE/ATV ADVENTURE(3).webp';
-
+import PCNavBar from '../../../../Navbar/PCNavBar';
 const AtvAdventure = () => {
   const [currentImage, setCurrentImage] = useState(AtvAdventure1);
   const [showModal, setShowModal] = useState(false);
@@ -31,8 +31,10 @@ const AtvAdventure = () => {
     setShowModal(false);
   };
 
-  return (
-    <div className='w-full min-h-screen'>
+  return (    
+    
+      <div className='w-full min-h-screen md:flex'>
+       <PCNavBar></PCNavBar>
       <div className='w-full flex justify-center items-center relative'>
         {images.length > 1 && (
           <>
