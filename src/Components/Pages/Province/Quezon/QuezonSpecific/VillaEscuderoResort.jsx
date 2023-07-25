@@ -3,6 +3,7 @@ import RagalaNavbar from '../../../../Navbar/RagalaNavbar';
 import VillaEscuderoResort1 from '../../../../../assets/destination/QUEZON/Villa Escudero Plantations and Resort/Villa Escudero Plantations and Resort2.webp';
 import VillaEscuderoResort2 from '../../../../../assets/destination/QUEZON/Villa Escudero Plantations and Resort/Villa Escudero Plantations and Resort3.webp';
 import VillaEscuderoResort3 from '../../../../../assets/destination/QUEZON/Villa Escudero Plantations and Resort/Villa Escudero Plantations and Resort4.webp';
+import PCNavBar from '../../../../Navbar/PCNavBar';
 
 const VillaEscuderoResort = () => {
   const [currentImage, setCurrentImage] = useState(VillaEscuderoResort1);
@@ -32,7 +33,8 @@ const VillaEscuderoResort = () => {
   };
 
   return (
-    <div className='w-full min-h-screen'>
+    <div className='w-full min-h-screen md:flex'>
+      <PCNavBar></PCNavBar>
       <div className='w-full flex justify-center items-center relative'>
         {images.length > 1 && (
           <>
@@ -90,11 +92,12 @@ const VillaEscuderoResort = () => {
           </div>
         )}
       </div>
-      <div className='flex flex-col items-center mt-4'>
-        <h1 className='text-5xl font-bold'>VillaEscuderoResort</h1>
+      <div className='flex flex-col items-center justify-center mt-10 mx-3 md:w-[50%] md:mt-[20%] lg:mt-[5%]'>
+        <h1 className='text-5xl font-bold text-center'>Villa Escudero Resort</h1>
         <div className='flex mt-4 space-x-4'>
           <a
-            href='https://booking-site-url.com' // Replace with the actual booking site URL
+            href='https://www.klook.com/en-PH/activity/18234-villa-escudero-tour-manila/?spm=HotelAPI_HotelDetail.SearchSuggest_LIST&clickId=4d7a979038
+            ' // Replace with the actual booking site URL
             target='_blank'
             rel='noopener noreferrer'
             className='bg-blue-500 text-white px-4 py-2 rounded-md'
@@ -102,7 +105,8 @@ const VillaEscuderoResort = () => {
             Book Now
           </a>
           <a
-            href='https://waze.com' // Replace with the actual Waze URL
+            href='https://ul.waze.com/ul?place=ChIJaZoWmKxGvTMR5JqAuPNC_YE&ll=13.99563290%2C121.34303910&navigate=yes&utm_campaign=default&utm_source=waze_website&utm_medium=lm_share_location
+            ' // Replace with the actual Waze URL
             target='_blank'
             rel='noopener noreferrer'
             className='bg-green-500 text-white px-4 py-2 rounded-md'
@@ -110,7 +114,9 @@ const VillaEscuderoResort = () => {
             Get Directions (Waze)
           </a>
         </div>
-        <p className='mt-[30px]'>Put the short descriptions here</p> 
+        <div className='flex w-80 justify-center items-center mt-[30px]'>
+            <p className='mx-3'>Put the short descriptions here</p> 
+        </div>
       </div>
       
       <RagalaNavbar />
