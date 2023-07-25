@@ -34,8 +34,8 @@ const VillaEscuderoResort = () => {
 
   return (
     <div className='w-full min-h-screen md:flex'>
-      <PCNavBar></PCNavBar>
-      <div className='w-full flex justify-center items-center relative'>
+    <PCNavBar></PCNavBar>
+    <div className='w-full md:w-[50%]  flex justify-center items-center relative'>
         {images.length > 1 && (
           <>
             <button

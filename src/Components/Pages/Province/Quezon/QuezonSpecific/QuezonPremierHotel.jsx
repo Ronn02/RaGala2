@@ -33,9 +33,9 @@ const QuezonPremierHotel = () => {
   };
 
   return (
-    <div className='w-full min-h-screen md:flex' /* additional css*/ >
-      <PCNavBar></PCNavBar>
-      <div className='w-full flex justify-center items-center relative'>
+    <div className='w-full min-h-screen md:flex'>
+    <PCNavBar></PCNavBar>
+    <div className='w-full md:w-[50%]  flex justify-center items-center relative'>
         {images.length > 1 && (
           <>
             <button
