@@ -21,11 +21,15 @@ const Laguna = () => {
             </div>
             
         <div className='w-full h-3/4 flex flex-col justify-center items-center mb-[100px]'>
-                <div className='h-full mx-2 justify-center items-center flexc mt-3'>
-                    <h2 className=' text-[#6F87BE] text-center font-semibold text-xl'>Welcome to Laguna: Where History and Nature Unite!</h2>
-                </div>
-                <p className='ml-3 my-2 text-2xl'> Explore </p>
-                
+        <div id='places' className='h-full w-3/4 mx-2 flex flex-col mt-[100px]'>
+            <div className='ml-[150px] my-2 text-2xl md:justify-start md:items-start md:text-start'> Explore </div>
+            <div className='flex-grow flex justify-end items-end'>
+                <h2 className='text-[#6F87BE] italic text-center md:text-right font-semibold text-xl md:text-2xl'>
+                Discover Laguna: Nature's Playground and Cultural Gem!
+                </h2>
+            </div>
+            <hr className='w-[80%] h-2 text-black' />
+        </div>
                 <div className='flex-col mx-3'>
                     
                     <div className='flex'>
