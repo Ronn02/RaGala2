@@ -96,7 +96,7 @@ const QuezonPremierHotel = () => {
         <h1 className='text-5xl font-bold text-center'>Quezon Premier Hotel</h1>
         <div className='flex mt-4 space-x-4'>
           <a
-            href='https://booking-site-url.com' // Replace with the actual booking site URL
+            href='https://www.klook.com/en-PH/hotels/detail/412426-quezon-premier-hotel-lucena/?spm=SearchResult.SearchResult_LIST&clickId=d0428dca68' // Replace with the actual booking site URL
             target='_blank'
             rel='noopener noreferrer'
             className='bg-blue-500 text-white px-4 py-2 rounded-md'
@@ -104,7 +104,8 @@ const QuezonPremierHotel = () => {
             Book Now
           </a>
           <a
-            href='https://waze.com' // Replace with the actual Waze URL
+            href='https://ul.waze.com/ul?preview_venue_id=79691916.796919156.2854217&navigate=yes&utm_campaign=default&utm_source=waze_website&utm_medium=lm_share_location
+            ' // Replace with the actual Waze URL
             target='_blank'
             rel='noopener noreferrer'
             className='bg-green-500 text-white px-4 py-2 rounded-md'
@@ -113,7 +114,7 @@ const QuezonPremierHotel = () => {
           </a>
         </div>
         <div className='flex w-80 justify-center items-center mt-[30px]'>
-            <p className='mx-3'>Put the short descriptions here</p> 
+            <p className='mx-3'>Nestled in the heart of Lucena City, Quezon Province, Philippines, Quezon Premier Hotel stands as a beacon of comfort and hospitality. Whether you're traveling for business or leisure, this premier hotel offers a warm and inviting atmosphere, exceptional services, and modern amenities, ensuring a memorable stay that exceeds your expectations.</p> 
         </div>    
       </div>
       

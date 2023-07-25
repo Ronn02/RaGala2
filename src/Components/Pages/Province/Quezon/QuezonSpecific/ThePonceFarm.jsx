@@ -94,10 +94,11 @@ const ThePonceFarm = () => {
         )}
       </div>
       <div className='flex flex-col items-center justify-center mt-10 mx-3 md:w-[50%] md:mt-[20%] lg:mt-[5%]'>
-        <h1 className='text-5xl font-bold text-center'>ThePonceFarm</h1>
+        <h1 className='text-5xl font-bold text-center'>The Ponce Farm</h1>
         <div className='flex mt-4 space-x-4'>
           <a
-            href='https://booking-site-url.com' // Replace with the actual booking site URL
+            href='https://www.klook.com/en-PH/hotel-vouchers/65500-Overnight-Stay-At-The-Ponce-Farm-Sariaya-Quezon/?spm=BlogArticle.InArticleHyperlinkWord&clickId=8f37d58e6b
+            The Ponce Farm' // Replace with the actual booking site URL
             target='_blank'
             rel='noopener noreferrer'
             className='bg-blue-500 text-white px-4 py-2 rounded-md'
@@ -105,7 +106,7 @@ const ThePonceFarm = () => {
             Book Now
           </a>
           <a
-            href='https://waze.com' // Replace with the actual Waze URL
+            href='https://ul.waze.com/ul?place=ChIJLbsHWyhLvTMRsW9z6iWKcYE&ll=13.88260750%2C121.55621010&navigate=yes&utm_campaign=default&utm_source=waze_website&utm_medium=lm_share_location' // Replace with the actual Waze URL
             target='_blank'
             rel='noopener noreferrer'
             className='bg-green-500 text-white px-4 py-2 rounded-md'
@@ -113,8 +114,8 @@ const ThePonceFarm = () => {
             Get Directions (Waze)
           </a>
         </div>
-        <div className='flex w-80 justify-center items-center mt-[30px]'>
-            <p className='mx-3'>Put the short descriptions here</p> 
+        <div className='flex justify-center items-center mt-[30px]'>
+            <p className='mx-3'>Nestled in the picturesque province of Quezon, Philippines, The Ponce Farm offers an idyllic escape from the hustle and bustle of city life. Surrounded by lush landscapes, rolling hills, and gentle breezes, this charming farm is a haven for travelers seeking tranquility, authentic rural experiences, and a taste of the Filipino countryside.</p> 
         </div>
       </div>
       

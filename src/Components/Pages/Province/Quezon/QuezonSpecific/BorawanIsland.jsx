@@ -92,7 +92,7 @@ const BorawanIsland = () => {
           </div>
         )}
       </div>
-      <div className='flex bg-yellow-100 flex-col items-center justify-center mt-10 mx-3 md:w-[50%] md:mt-[10%] lg:mt-[10%]'/*changed */> 
+      <div className='flex flex-col items-center justify-center mt-10 mx-3 md:w-[50%] md:mt-[10%] lg:mt-[10%]'/*changed */> 
         <h1 className='text-5xl font-bold'>Borawan Island</h1>
         <div className='flex mt-4 space-x-4'>
           <a
@@ -112,7 +112,7 @@ const BorawanIsland = () => {
             Get Directions (Waze)
           </a>
         </div>
-        <div className='flex bg-red-300 justify-center mx-4 items-center mt-[30px]' /*added some css*/>
+        <div className='flex w-80 justify-center mx-4 items-center mt-[30px]' /*added some css*/>
             <p className='mx-3'>Welcome to Borawan, a hidden gem nestled in the tropical paradise of Quezon Province, Philippines. Known for its stunning beauty and unique landscape, Borawan offers a perfect blend of the famous Boracay and Palawan, hence its name. Whether you seek relaxation on powdery beaches or an adventure amidst rugged rock formations, Borawan promises an unforgettable experience that will leave you enchanted and rejuvenated.</p> 
         </div>
       </div>
