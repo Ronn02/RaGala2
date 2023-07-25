@@ -4,6 +4,7 @@ import aguinaldoshrine1 from '../../../../../assets/destination/LAGUNA/HIDDEN VA
 import aguinaldoshrine2 from '../../../../../assets/destination/LAGUNA/HIDDEN VALLEY SPRINGS/HIDDEN VALLEY SPRINGS, LAGUNA - 2.jpg';
 import aguinaldoshrine3 from '../../../../../assets/destination/LAGUNA/HIDDEN VALLEY SPRINGS/HIDDEN VALLEY SPRINGS, LAGUNA - 4.jpg';
 import PCNavBar from '../../../../Navbar/PCNavBar';
+import StarRating from '../../../StarRating/StarRating';
 
 const HiddenValleySprings = () => {
   const [currentImage, setCurrentImage] = useState(aguinaldoshrine1);
@@ -32,6 +33,7 @@ const HiddenValleySprings = () => {
     setShowModal(false);
   };
 
+  const [userRating, setUserRating] = useState(4.5);
   return (
     <div className='w-full min-h-screen md:flex'>
       <PCNavBar></PCNavBar>

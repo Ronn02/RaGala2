@@ -3,6 +3,7 @@ import RagalaNavbar from '../../../../Navbar/RagalaNavbar';
 import aguinaldoshrine1 from '../../../../../assets/destination/CAVITE/AGUINALDO SHRINE/AGUINALDO SHRINE, CAVITE - 1.jpg';
 import aguinaldoshrine2 from '../../../../../assets/destination/CAVITE/AGUINALDO SHRINE/AGUINALDO SHRINE, CAVITE - 2.jpg';
 import aguinaldoshrine3 from '../../../../../assets/destination/CAVITE/AGUINALDO SHRINE/AGUINALDO SHRINE, CAVITE - 3.jpg';
+import StarRating from '../../../StarRating/StarRating';
 
 const AguinaldoShrine = () => {
   const [currentImage, setCurrentImage] = useState(aguinaldoshrine1);
@@ -31,6 +32,7 @@ const AguinaldoShrine = () => {
     setShowModal(false);
   };
 
+  const [userRating, setUserRating] = useState(4.5);
   return (
     <div className='w-full min-h-screen'>
       <div className='w-full flex justify-center items-center relative'>
@@ -92,6 +94,7 @@ const AguinaldoShrine = () => {
       </div>
       <div className='flex flex-col items-center mt-4'>
         <h1 className='text-5xl font-bold'>AguinaldoShrine</h1>
+        <StarRating rating={userRating} onChange={setUserRating} />
         <div className='flex mt-4 space-x-4'>
           <a
             href='https://booking-site-url.com' // Replace with the actual booking site URL

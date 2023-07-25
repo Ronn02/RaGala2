@@ -4,6 +4,7 @@ import EnchantedKingdom1 from '../../../../../assets/destination/LAGUNA/ENCHANTE
 import EnchantedKingdom2 from '../../../../../assets/destination/LAGUNA/ENCHANTED KINGDOM/ENCHANTED KINGDOM, LAGUNA - 2.jpg';
 import EnchantedKingdom3 from '../../../../../assets/destination/LAGUNA/ENCHANTED KINGDOM/ENCHANTED KINGDOM, LAGUNA - 3.jpg';
 import PCNavBar from '../../../../Navbar/PCNavBar';
+import StarRating from '../../../StarRating/StarRating';
 
 const EnchantedKingdom = () => {
   const [currentImage, setCurrentImage] = useState(EnchantedKingdom1);
@@ -32,6 +33,7 @@ const EnchantedKingdom = () => {
     setShowModal(false);
   };
 
+  const [userRating, setUserRating] = useState(4.5);
   return (
     <div className='w-full min-h-screen md:flex'>
       <PCNavBar></PCNavBar>
@@ -94,6 +96,7 @@ const EnchantedKingdom = () => {
       </div>
       <div className='flex flex-col items-center justify-center mt-10 mx-3 md:w-[50%] md:mt-[20%] lg:mt-[5%]'>
         <h1 className='text-5xl font-bold text-center'>Enchanted Kingdom</h1>
+        <StarRating rating={userRating} onChange={setUserRating} />
         <div className='flex mt-4 space-x-4'>
           <a
             href='https://www.klook.com/en-PH/activity/7350-enchanted-kingdom-laguna-manila/?spm=City.ActivityList%3Aany%3A%3ACityActivitiesFilter%3ACard_LIST&clickId=8ce57adbaa' // Replace with the actual booking site URL

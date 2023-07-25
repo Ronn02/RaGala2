@@ -4,6 +4,7 @@ import PagsanjanFalls1 from '../../../../../assets/destination/LAGUNA/PAGSANJAN 
 import PagsanjanFalls2 from '../../../../../assets/destination/LAGUNA/PAGSANJAN FALLS/PAGSANJAN FALLS, LAGUNA - 3.jpg';
 import PagsanjanFalls3 from '../../../../../assets/destination/LAGUNA/PAGSANJAN FALLS/PAGSANJAN FALLS, LAGUNA - 1.jpg';
 import PCNavBar from '../../../../Navbar/PCNavBar';
+import StarRating from '../../../StarRating/StarRating';
 
 const PagsanjanFalls = () => {
   const [currentImage, setCurrentImage] = useState(PagsanjanFalls1);
@@ -32,6 +33,7 @@ const PagsanjanFalls = () => {
     setShowModal(false);
   };
 
+  const [userRating, setUserRating] = useState(4.5);
   return (
     <div className='w-full min-h-screen md:flex'>
       <PCNavBar></PCNavBar>
@@ -94,6 +96,7 @@ const PagsanjanFalls = () => {
       </div>
       <div className='flex flex-col items-center justify-center mt-10 mx-3 md:w-[50%] md:mt-[20%] lg:mt-[5%]'>
         <h1 className='text-5xl font-bold text-center'>Pagsanjan Falls</h1>
+        <StarRating rating={userRating} onChange={setUserRating} />
         <div className='flex mt-4 space-x-4'>
           <a
             href='https://www.klook.com/en-PH/activity/10560-pagsanjan-falls-private-day-tour-manila/?spm=City.ActivityList%3Aany%3A%3ACityActivitiesFilter%3ACard_LIST&clickId=f454979538' // Replace with the actual booking site URL

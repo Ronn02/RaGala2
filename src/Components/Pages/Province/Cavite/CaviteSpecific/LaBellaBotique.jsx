@@ -4,7 +4,7 @@ import LaBellaBotique1 from '../../../../../assets/destination/CAVITE/LA BELLA B
 import LaBellaBotique2 from '../../../../../assets/destination/CAVITE/LA BELLA BOTIQUE HOTEL/LA BELLA HOTEL, CAVITE - 2.jpg';
 import LaBellaBotique3 from '../../../../../assets/destination/CAVITE/LA BELLA BOTIQUE HOTEL/LA BELLA HOTEL, CAVITE - 3.jpg';
 import PCNavBar from '../../../../Navbar/PCNavBar';
-
+import StarRating from '../../../StarRating/StarRating';
 
 const LaBellaBotique = () => {
   const [currentImage, setCurrentImage] = useState(LaBellaBotique1);
@@ -32,7 +32,7 @@ const LaBellaBotique = () => {
   const handleCloseModal = () => {
     setShowModal(false);
   };
-
+  const [userRating, setUserRating] = useState(4.5);
   return (
     <div className='w-full min-h-screen md:flex'>
       <PCNavBar></PCNavBar>
@@ -94,8 +94,8 @@ const LaBellaBotique = () => {
         )}
       </div>
       <div className='flex flex-col items-center justify-center mt-10 mx-3 md:w-[50%] md:mt-[20%] lg:mt-[5%]'>
-
         <h1 className='text-5xl font-bold'>La Bella Botique</h1>
+        <StarRating rating={userRating} onChange={setUserRating} />
         <div className='flex mt-4 space-x-4'>
           <a
             href=' https://www.klook.com/en-PH/hotels/detail/570156-la-bella-boutique-hotel/?spm=SearchResult.SearchResult_LIST&clickId=3cb5399342' // Replace with the actual booking site URL

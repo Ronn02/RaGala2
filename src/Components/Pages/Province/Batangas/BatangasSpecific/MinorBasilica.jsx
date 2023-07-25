@@ -4,6 +4,7 @@ import MinorBasilica1 from '../../../../../assets/destination/BATANGAS/MINOR BAS
 import MinorBasilica2 from '../../../../../assets/destination/BATANGAS/MINOR BASILICA OF ST. MARTIN OF TOURS/TAAL BASILICA, BATANGAS - 3.jpg';
 import MinorBasilica3 from '../../../../../assets/destination/BATANGAS/MINOR BASILICA OF ST. MARTIN OF TOURS/TAAL BASILICA, BATANGAS - 4.jpg';
 import PCNavBar from '../../../../Navbar/PCNavBar';
+import StarRating from '../../../StarRating/StarRating';
 
 const MinorBasilica = () => {
   const [currentImage, setCurrentImage] = useState(MinorBasilica1);
@@ -32,6 +33,7 @@ const MinorBasilica = () => {
     setShowModal(false);
   };
 
+  const [userRating, setUserRating] = useState(4.5);
   return (
     <div className='w-full min-h-screen md:flex'>
       <PCNavBar></PCNavBar>
@@ -94,6 +96,8 @@ const MinorBasilica = () => {
       </div>
       <div className='flex flex-col items-center justify-center mt-10 mx-3 md:w-[50%] md:mt-[20%] lg:mt-[15%]'/*changed */> 
         <h1 className='text-5xl font-bold'>Minor Basilica OF St. Martin of Tours</h1>
+        <StarRating rating={userRating} onChange={setUserRating} />
+
         <div className='flex mt-4 space-x-4'>
           <a
             href='https://www.klook.com/en-PH/hotels/detail/34229-paradores-del-castillo/?spm=HotelAPI_HotelListing.ListingHotel_LIST&clickId=fa8061315d' // booking site URL

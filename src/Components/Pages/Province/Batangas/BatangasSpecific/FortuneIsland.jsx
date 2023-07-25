@@ -4,6 +4,7 @@ import FortuneIsland1 from '../../../../../assets/destination/BATANGAS/FORTUNE I
 import FortuneIsland2 from '../../../../../assets/destination/BATANGAS/FORTUNE ISLAND/FORTUNE ISLAND, BATANGAS - 2.jpg';
 import FortuneIsland3 from '../../../../../assets/destination/BATANGAS/FORTUNE ISLAND/FORTUNE ISLAND, BATANGAS - 3.png';
 import PCNavBar from '../../../../Navbar/PCNavBar';
+import StarRating from '../../../StarRating/StarRating';
 
 const FortuneIsland = () => {
   const [currentImage, setCurrentImage] = useState(FortuneIsland1);
@@ -32,6 +33,7 @@ const FortuneIsland = () => {
     setShowModal(false);
   };
 
+  const [userRating, setUserRating] = useState(4.5);
   return (
     <div className='w-full min-h-screen md:flex' /* additional css*/ >
       <PCNavBar></PCNavBar>
@@ -94,6 +96,8 @@ const FortuneIsland = () => {
       </div>
       <div className='flex flex-col items-center justify-center mt-10 mx-3 md:w-[50%] md:mt-[20%] lg:mt-[10%]'/*changed */> 
         <h1 className='text-5xl font-bold'>Fortune Island</h1>
+        <StarRating rating={userRating} onChange={setUserRating} />
+
         <div className='flex mt-4 space-x-4'>
           <a
             href='https://www.airbnb.com/fortune-island-philippines/stays' // booking site URL

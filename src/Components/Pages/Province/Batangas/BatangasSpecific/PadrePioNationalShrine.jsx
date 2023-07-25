@@ -4,6 +4,7 @@ import PadrePioNationalShrine1 from '../../../../../assets/destination/BATANGAS/
 import PadrePioNationalShrine2 from '../../../../../assets/destination/BATANGAS/PADRE PIO NATIONAL SHRINE/PADRE PIO NATIONAL SHRINE, BATANAGAS - 4.jpg';
 import PadrePioNationalShrine3 from '../../../../../assets/destination/BATANGAS/PADRE PIO NATIONAL SHRINE/PADRE PIO NATIONAL SHRINE, BATANGAS - 2.jpg';
 import PCNavBar from '../../../../Navbar/PCNavBar';
+import StarRating from '../../../StarRating/StarRating';
 
 const PadrePioNationalShrine = () => {
   const [currentImage, setCurrentImage] = useState(PadrePioNationalShrine1);
@@ -32,6 +33,7 @@ const PadrePioNationalShrine = () => {
     setShowModal(false);
   };
 
+  const [userRating, setUserRating] = useState(4.5);
   return (
     <div className='w-full min-h-screen md:flex'>
       <PCNavBar></PCNavBar>
@@ -94,6 +96,8 @@ const PadrePioNationalShrine = () => {
       </div>
       <div className='flex flex-col items-center md:mt-[20%] mt-4'>
         <h1 className='text-5xl font-bold'>Padre Pio National Shrine</h1>
+        <StarRating rating={userRating} onChange={setUserRating} />
+
         <div className='flex mt-4 space-x-4'>
           <a
             href='https://www.klook.com/en-PH/hotels/detail/191573-bravo-tanauan-hotel/?check_in=2023-07-21&check_out=2023-07-22&room_num=1&adult_num=2&child_num=0&age=&page_source=hotel_list_page&server_data=81124443136e8db398c4150149cf9cb8abd8229ed0cc4b84f39ae1538c9297f9b055cbd5c038cc771b5d6a9b2963269a176e4c7be10db6b3257d24e8d3ced39c5f755303292cbe0deb82ad5b26d54ca7c40dfd9c44da728ef31f43dd57fe7804&source_price_token=eyJjdXJyZW5jeSI6IlBIUCIsInByaWNlIjo0NzAyLjgsInNvdXJjZSI6MX0%3D&is_suggest_time=1' // Replace with the actual booking site URL
