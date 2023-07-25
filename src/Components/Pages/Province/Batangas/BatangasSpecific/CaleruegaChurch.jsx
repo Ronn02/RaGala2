@@ -3,6 +3,7 @@ import RagalaNavbar from '../../../../Navbar/RagalaNavbar';
 import CaleruegaChurch1 from '../../../../../assets/destination/BATANGAS/CALERUEGA CHURCH/CALERUEGA CHURCH, BATANGAS - 1.jpg';
 import CaleruegaChurch2 from '../../../../../assets/destination/BATANGAS/CALERUEGA CHURCH/CALERUEGA CHURCH, BATANGAS - 2.jpg';
 import CaleruegaChurch3 from '../../../../../assets/destination/BATANGAS/CALERUEGA CHURCH/CALERUEGA CHURCH, BATANGAS - 4.jpg';
+import PCNavBar from '../../../../Navbar/PCNavBar';
 
 const CaleruegaChurch = () => {
   const [currentImage, setCurrentImage] = useState(CaleruegaChurch1);
@@ -32,8 +33,9 @@ const CaleruegaChurch = () => {
   };
 
   return (
-    <div className='w-full min-h-screen'>
-      <div className='w-full flex justify-center items-center relative'>
+    <div className='w-full min-h-screen md:flex'>
+      <PCNavBar></PCNavBar>
+      <div className='w-full md:w-[50%] flex justify-center items-center relative'>
         {images.length > 1 && (
           <>
             <button
@@ -90,14 +92,15 @@ const CaleruegaChurch = () => {
           </div>
         )}
       </div>
-      <div className='flex flex-col items-center mt-4'>
-        <h1 className='text-5xl font-bold'>Caleruega Church</h1>
+  
+      <div className='flex flex-col items-center justify-center mt-10 mx-3 md:w-[50%] md:mt-[20%] lg:mt-[5%]'>
+        <h1 className='text-5xl font-bold text-center'>Caleruega Church</h1>
         <div className='flex mt-4 space-x-4'>
           <a
             href='https://booking-site-url.com' // Replace with the actual booking site URL
             target='_blank'
             rel='noopener noreferrer'
-            className='bg-blue-500 text-white px-4 py-2 rounded-md'
+            className='bg-blue-500 text-white px-4 py-2 rounded-md justify-center items-center'
           >
             Book Now
           </a>
@@ -105,12 +108,15 @@ const CaleruegaChurch = () => {
             href='https://waze.com' // Replace with the actual Waze URL
             target='_blank'
             rel='noopener noreferrer'
-            className='bg-green-500 text-white px-4 py-2 rounded-md'
+            className='bg-green-500 text-white px-4 py-2 rounded-md justify-center items-center'
           >
             Get Directions (Waze)
           </a>
         </div>
-        <p className='mt-[30px]'>Put the short descriptions here</p> 
+          <div className='flex w-80 justify-center items-center mt-[30px]'>
+            <p className='mx-3'>The Transfiguration Chapel is an alternative name for Caleruega Church. It is a stunning chapel positioned atop the tallest hill, surrounded by breathtakingly expansive views of the scenery.
+This church in Nasugbu, Batangas, may reflect a profoundly spiritual and religious environment because to its great location at the top of the hill.</p> 
+          </div>
       </div>
       
       <RagalaNavbar />
