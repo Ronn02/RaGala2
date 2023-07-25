@@ -4,6 +4,7 @@ import QuezonPremierHotel1 from '../../../../../assets/destination/QUEZON/Quezon
 import QuezonPremierHotel2 from '../../../../../assets/destination/QUEZON/Quezon Premier Hotel Lucena/Quezon Premier Hotel Lucena3.webp';
 import QuezonPremierHotel3 from '../../../../../assets/destination/QUEZON/Quezon Premier Hotel Lucena/Quezon Premier Hotel Lucena4.webp';
 import PCNavBar from '../../../../Navbar/PCNavBar';
+import StarRating from '../../../StarRating/StarRating';
 
 const QuezonPremierHotel = () => {
   const [currentImage, setCurrentImage] = useState(QuezonPremierHotel1);
@@ -94,6 +95,8 @@ const QuezonPremierHotel = () => {
       </div>
       <div className='flex flex-col items-center justify-center mt-10 mx-3 md:w-[50%] md:mt-[20%] lg:mt-[5%]'>
         <h1 className='text-5xl font-bold text-center'>Quezon Premier Hotel</h1>
+        <StarRating rating={userRating} onChange={setUserRating} />
+
         <div className='flex mt-4 space-x-4'>
           <a
             href='https://www.klook.com/en-PH/hotels/detail/412426-quezon-premier-hotel-lucena/?spm=SearchResult.SearchResult_LIST&clickId=d0428dca68' // Replace with the actual booking site URL

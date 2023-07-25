@@ -4,7 +4,7 @@ import ThePonceFarm1 from '../../../../../assets/destination/QUEZON/THE PONCE FA
 import ThePonceFarm2 from '../../../../../assets/destination/QUEZON/THE PONCE FARM/The Ponce Farm3.png';
 import ThePonceFarm3 from '../../../../../assets/destination/QUEZON/THE PONCE FARM/The Ponce Farm4.png';
 import PCNavBar from '../../../../Navbar/PCNavBar';
-
+import StarRating from '../../../StarRating/StarRating';
 
 const ThePonceFarm = () => {
   const [currentImage, setCurrentImage] = useState(ThePonceFarm1);
@@ -33,6 +33,7 @@ const ThePonceFarm = () => {
     setShowModal(false);
   };
 
+  const [userRating, setUserRating] = useState(4.5);
   return (
     <div className='w-full min-h-screen md:flex'>
     <PCNavBar></PCNavBar>
@@ -95,6 +96,8 @@ const ThePonceFarm = () => {
       </div>
       <div className='flex flex-col items-center justify-center mt-10 mx-3 md:w-[50%] md:mt-[20%] lg:mt-[5%]'>
         <h1 className='text-5xl font-bold text-center'>The Ponce Farm</h1>
+        <StarRating rating={userRating} onChange={setUserRating} />
+
         <div className='flex mt-4 space-x-4'>
           <a
             href='https://www.klook.com/en-PH/hotel-vouchers/65500-Overnight-Stay-At-The-Ponce-Farm-Sariaya-Quezon/?spm=BlogArticle.InArticleHyperlinkWord&clickId=8f37d58e6b

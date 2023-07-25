@@ -4,6 +4,7 @@ import BorawanIsland1 from '../../../../../assets/destination/QUEZON/BORAWAN ISL
 import BorawanIsland2 from '../../../../../assets/destination/QUEZON/BORAWAN ISLAND/BORAWAN ISLAND3.webp';
 import BorawanIsland3 from '../../../../../assets/destination/QUEZON/BORAWAN ISLAND/BORAWAN ISLAND4.webp';
 import PCNavBar from '../../../../Navbar/PCNavBar';
+import StarRating from '../../../StarRating/StarRating';
 
 const BorawanIsland = () => {
   const [currentImage, setCurrentImage] = useState(BorawanIsland1);
@@ -32,6 +33,7 @@ const BorawanIsland = () => {
     setShowModal(false);
   };
 
+  const [userRating, setUserRating] = useState(4.5);
   return (
     <div className='w-full min-h-screen md:flex'>
       <PCNavBar></PCNavBar>
@@ -94,6 +96,7 @@ const BorawanIsland = () => {
       </div>
       <div className='flex flex-col items-center justify-center mt-10 mx-3 md:w-[50%] md:mt-[10%] lg:mt-[10%]'/*changed */> 
         <h1 className='text-5xl font-bold'>Borawan Island</h1>
+        <StarRating rating={userRating} onChange={setUserRating} />
         <div className='flex mt-4 space-x-4'>
           <a
             href='https://www.klook.com/en-PH/hotels/detail/639057-borawan-island-resort-by-cocotel/?check_in=2023-07-20&check_out=2023-07-21&room_num=1&adult_num=2&child_num=0&age=&page_source=hotel_list_page&server_data=81124443136e8db398c4150149cf9cb8d4dedc53c9bbb42d49c1a50a09d21a817cb7c59d7ef56dabe0f5c3c098a031f0176e4c7be10db6b3257d24e8d3ced39c0595fecccfd31cb7f9e1256a95ca3682c40dfd9c44da728ef31f43dd57fe7804&source_price_token=eyJjdXJyZW5jeSI6IlBIUCIsInByaWNlIjo2NTIwLjIsInNvdXJjZSI6MX0%3D&is_suggest_time=1' // Replace with the actual booking site URL
