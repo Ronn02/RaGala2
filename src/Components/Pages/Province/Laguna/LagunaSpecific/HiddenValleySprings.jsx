@@ -96,6 +96,7 @@ const HiddenValleySprings = () => {
       </div>
       <div className='flex flex-col items-center justify-center mt-10 mx-3 md:w-[50%] md:mt-[20%] lg:mt-[5%]'>
         <h1 className='text-5xl font-bold text-center'>Hidden Valley Springs</h1>
+        <StarRating rating={userRating} onChange={setUserRating} />
         <div className='flex mt-4 space-x-4'>
           <a
             href='https://www.klook.com/en-PH/activity/10562-hidden-valley-springs-private-day-tour-manila/' // Replace with the actual booking site URL
