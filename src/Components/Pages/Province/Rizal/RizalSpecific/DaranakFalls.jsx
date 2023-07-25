@@ -35,7 +35,7 @@ const DaranakFalls = () => {
   return (
     <div className='w-full min-h-screen md:flex'>
     <PCNavBar></PCNavBar>
-    <div className='w-full md:w-[60%]  flex justify-center items-center relative'>
+    <div className='w-full md:w-[50%]  flex justify-center items-center relative'>
         {images.length > 1 && (
           <>
             <button
