@@ -3,6 +3,7 @@ import RagalaNavbar from '../../../../Navbar/RagalaNavbar';
 import AvilonZoo1 from '../../../../../assets/destination/RIZAL/AVILON ZOO/AVILON ZOO, RIZAL - 1.jpg';
 import AvilonZoo2 from '../../../../../assets/destination/RIZAL/AVILON ZOO/AVILON ZOO, RIZAL - 2.jpg';
 import AvilonZoo3 from '../../../../../assets/destination/RIZAL/AVILON ZOO/AVILON ZOO, RIZAL - 3.jpg';
+import PCNavBar from '../../../../Navbar/PCNavBar'; 
 
 const AvilonZoo = () => {
   const [currentImage, setCurrentImage] = useState(AvilonZoo1);
@@ -32,8 +33,9 @@ const AvilonZoo = () => {
   };
 
   return (
-    <div className='w-full min-h-screen'>
-      <div className='w-full flex justify-center items-center relative'>
+    <div className='w-full min-h-screen md:flex'>
+    <PCNavBar></PCNavBar>
+    <div className='w-full md:w-[60%]  flex justify-center items-center relative'>
         {images.length > 1 && (
           <>
             <button
@@ -90,11 +92,11 @@ const AvilonZoo = () => {
           </div>
         )}
       </div>
-      <div className='flex flex-col items-center mt-4'>
-        <h1 className='text-5xl font-bold'>AvilonZoo</h1>
+      <div className='flex flex-col items-center justify-center mt-10 mx-3 md:w-[50%] md:mt-[20%] lg:mt-[5%]'>
+        <h1 className='text-5xl font-bold text-center'>AvilonZoo</h1>
         <div className='flex mt-4 space-x-4'>
           <a
-            href='https://booking-site-url.com' // Replace with the actual booking site URL
+            href='https://www.klook.com/en-PH/activity/22280-avilon-zoo-ticket-manila/?spm=Activity.SearchSuggest_LIST&clickId=cbb2c7f026' // Replace with the actual booking site URL
             target='_blank'
             rel='noopener noreferrer'
             className='bg-blue-500 text-white px-4 py-2 rounded-md'
@@ -102,7 +104,7 @@ const AvilonZoo = () => {
             Book Now
           </a>
           <a
-            href='https://waze.com' // Replace with the actual Waze URL
+            href='https://ul.waze.com/ul?preview_venue_id=79429779.793970114.14408663&navigate=yes&utm_campaign=default&utm_source=waze_website&utm_medium=lm_share_location' // Replace with the actual Waze URL
             target='_blank'
             rel='noopener noreferrer'
             className='bg-green-500 text-white px-4 py-2 rounded-md'
@@ -110,7 +112,9 @@ const AvilonZoo = () => {
             Get Directions (Waze)
           </a>
         </div>
-        <p className='mt-[30px]'>Put the short descriptions here</p> 
+        <div className='flex w-80 justify-center items-center mt-[30px]'>
+            <p className='mx-3'>This zoo is home to over 1,200 animals from all over the world. You can see lions, tigers, bears, monkeys, and many other animals up close. There are also educational exhibits and shows that teach you about the animals' natural habitats.</p> 
+          </div>
       </div>
       
       <RagalaNavbar />

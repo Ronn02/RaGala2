@@ -31,11 +31,10 @@ const AtvAdventure = () => {
     setShowModal(false);
   };
 
-  return (    
-    
-      <div className='w-full min-h-screen md:flex'>
-       <PCNavBar></PCNavBar>
-      <div className='w-full flex justify-center items-center relative'>
+  return (  
+    <div className='w-full min-h-screen md:flex'>
+    <PCNavBar></PCNavBar>
+      <div className='w-full md:w-[60%]  flex justify-center items-center relative'>
         {images.length > 1 && (
           <>
             <button
@@ -92,11 +91,11 @@ const AtvAdventure = () => {
           </div>
         )}
       </div>
-      <div className='flex flex-col items-center mt-4'>
-        <h1 className='text-5xl font-bold'>AtvAdventure</h1>
+      <div className='flex flex-col items-center justify-center mt-10 mx-3 md:w-[50%] md:mt-[20%] lg:mt-[5%]'>
+        <h1 className='text-5xl font-bold text-center'>AtvAdventure</h1>
         <div className='flex mt-4 space-x-4'>
           <a
-            href='https://booking-site-url.com' // Replace with the actual booking site URL
+            href='https://www.klook.com/en-PH/activity/20314-atv-adventure-rizal-manila/?aid=825&aff_adid=474028&aff_label1=ATV%20Ride%20Experience%20Rizal&aff_label2=Rizal&aff_label3=Philippines&aff_pid=&aff_sid=&utm_medium=affiliate-alwayson&utm_source=non-network&utm_campaign=825&utm_term=&utm_content=&aff_klick_id=41123951077-825-474028-8954b9e' // Replace with the actual booking site URL
             target='_blank'
             rel='noopener noreferrer'
             className='bg-blue-500 text-white px-4 py-2 rounded-md'
@@ -104,7 +103,7 @@ const AtvAdventure = () => {
             Book Now
           </a>
           <a
-            href='https://waze.com' // Replace with the actual Waze URL
+            href='https://ul.waze.com/ul?place=ChIJt6OKHEO5lzMRkQLqjDUwS68&ll=14.65858510%2C121.16207020&navigate=yes&utm_campaign=default&utm_source=waze_website&utm_medium=lm_share_location' // Replace with the actual Waze URL
             target='_blank'
             rel='noopener noreferrer'
             className='bg-green-500 text-white px-4 py-2 rounded-md'
@@ -112,8 +111,10 @@ const AtvAdventure = () => {
             Get Directions (Waze)
           </a>
         </div>
-        <p className='mt-[30px]'>Put the short descriptions here</p> 
+        <div className='flex w-80 justify-center items-center mt-[30px]'>
+        <p className='mx-3'>This is a fun and exciting way to explore the forests and mountains of Rizal. You'll get to ride an ATV through challenging terrain and enjoy stunning views of the surrounding countryside</p> 
       </div>
+    </div>
       
       <RagalaNavbar />
     </div>
