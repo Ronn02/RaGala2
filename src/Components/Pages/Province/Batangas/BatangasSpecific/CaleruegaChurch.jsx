@@ -97,7 +97,7 @@ const CaleruegaChurch = () => {
         <h1 className='text-5xl font-bold text-center'>Caleruega Church</h1>
         <div className='flex mt-4 space-x-4'>
           <a
-            href='https://booking-site-url.com' // Replace with the actual booking site URL
+            href='https://www.klook.com/en-PH/hotels/detail/164471-twin-lakes-hotel/?spm=SearchResult.SearchResult_LIST&clickId=7c892a234c' // Replace with the actual booking site URL
             target='_blank'
             rel='noopener noreferrer'
             className='bg-blue-500 text-white px-4 py-2 rounded-md justify-center items-center'
@@ -105,7 +105,7 @@ const CaleruegaChurch = () => {
             Book Now
           </a>
           <a
-            href='https://waze.com' // Replace with the actual Waze URL
+            href='https://www.waze.com/live-map/directions/ph/calabarzon/nasugbu/caleruega-chapel-of-transfiguration?to=place.ChIJkYlZ_rmWvTMRNWGK9bG8HA4' // Replace with the actual Waze URL
             target='_blank'
             rel='noopener noreferrer'
             className='bg-green-500 text-white px-4 py-2 rounded-md justify-center items-center'
