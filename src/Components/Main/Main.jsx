@@ -130,7 +130,7 @@ const Main = () => {
 
   useEffect(() => {
     const postData = async () => {
-      const q = query(collectionRef, orderBy("timestamp", "asc"));
+      const q = query(collectionRef, orderBy("timestamp", "desc"));
       await onSnapshot(q, (doc) => {
         dispatch({
           type: SUBMIT_POST,
