@@ -165,9 +165,7 @@ const PostCard = ({ uid, id, logo, name, email, text, image, timestamp }) => {
           >
             <div className="flex items-center cursor-pointer">
               <img className="h-8 mr-4" src={comment} alt="comment"></img>
-              <p className="font-roboto font-medium text-md text-gray-700 no-underline tracking-normal leading-none">
-                Comments
-              </p>
+              
             </div>
           </div>
           <div
@@ -175,9 +173,7 @@ const PostCard = ({ uid, id, logo, name, email, text, image, timestamp }) => {
             onClick={deletePost}
           >
             <img className="h-8 mr-4" src={remove} alt="delete"></img>
-            <p className="font-roboto font-medium text-md text-gray-700 no-underline tracking-normal leading-none">
-              Delete
-            </p>
+            
           </div>
         </div>
       </div>
