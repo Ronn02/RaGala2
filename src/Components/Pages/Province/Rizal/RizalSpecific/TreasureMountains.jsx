@@ -3,6 +3,7 @@ import RagalaNavbar from '../../../../Navbar/RagalaNavbar';
 import TreasureMountains1 from '../../../../../assets/destination/RIZAL/TREASURE MOUNTAINS/TREASURE MOUNTAINS, RIZAL - 1.jpg';
 import TreasureMountains2 from '../../../../../assets/destination/RIZAL/TREASURE MOUNTAINS/TREASURE MOUNTAINS, RIZAL - 2.jpg';
 import TreasureMountains3 from '../../../../../assets/destination/RIZAL/TREASURE MOUNTAINS/TREASURE MOUNTAINS, RIZAL - 3.jpg';
+import PCNavBar from '../../../../Navbar/PCNavBar';
 
 const TreasureMountains = () => {
   const [currentImage, setCurrentImage] = useState(TreasureMountains1);
@@ -32,8 +33,9 @@ const TreasureMountains = () => {
   };
 
   return (
-    <div className='w-full min-h-screen'>
-      <div className='w-full flex justify-center items-center relative'>
+    <div className='w-full min-h-screen md:flex'>
+      <PCNavBar></PCNavBar>
+      <div className='w-full md:w-[60%]  flex justify-center items-center relative'>
         {images.length > 1 && (
           <>
             <button
@@ -90,11 +92,11 @@ const TreasureMountains = () => {
           </div>
         )}
       </div>
-      <div className='flex flex-col items-center mt-4'>
-        <h1 className='text-5xl font-bold'>TreasureMountains</h1>
+      <div className='flex flex-col items-center justify-center mt-10 mx-3 md:w-[50%] md:mt-[20%] lg:mt-[5%]'>
+        <h1 className='text-5xl font-bold text-center'>TreasureMountains</h1>
         <div className='flex mt-4 space-x-4'>
           <a
-            href='https://booking-site-url.com' // Replace with the actual booking site URL
+            href='https://www.klook.com/en-PH/activity/57782-treasure-mountain-day-tour-rizal/?spm=SearchResult.SearchResult_LIST&clickId=3c766af98c' // Replace with the actual booking site URL
             target='_blank'
             rel='noopener noreferrer'
             className='bg-blue-500 text-white px-4 py-2 rounded-md'
@@ -102,7 +104,7 @@ const TreasureMountains = () => {
             Book Now
           </a>
           <a
-            href='https://waze.com' // Replace with the actual Waze URL
+            href='https://ul.waze.com/ul?place=ChIJsW1SOAmTlzMRJt2VjkRjFZM&ll=14.60076300%2C121.36449960&navigate=yes&utm_campaign=default&utm_source=waze_website&utm_medium=lm_share_location' // Replace with the actual Waze URL
             target='_blank'
             rel='noopener noreferrer'
             className='bg-green-500 text-white px-4 py-2 rounded-md'
@@ -110,7 +112,9 @@ const TreasureMountains = () => {
             Get Directions (Waze)
           </a>
         </div>
-        <p className='mt-[30px]'>Put the short descriptions here</p> 
+        <div className='flex w-80 justify-center items-center mt-[30px]'>
+            <p className='mx-3'>This tour takes you to Treasure Mountain, a popular destination for hiking, ATV riding, and ziplining. You can also visit the nearby Daranak Falls, a beautiful waterfall with several cascading pools.</p> 
+          </div>
       </div>
       
       <RagalaNavbar />

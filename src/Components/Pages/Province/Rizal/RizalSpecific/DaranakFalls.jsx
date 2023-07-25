@@ -3,6 +3,7 @@ import RagalaNavbar from '../../../../Navbar/RagalaNavbar';
 import DaranakFalls1 from '../../../../../assets/destination/RIZAL/DARANAK FALLS/DARANAK FALLS, RIZAL - 1.jpg';
 import DaranakFalls2 from '../../../../../assets/destination/RIZAL/DARANAK FALLS/DARANAK FALLS, RIZAL - 2.jpg';
 import DaranakFalls3 from '../../../../../assets/destination/RIZAL/DARANAK FALLS/DARANAK FALLS, RIZAL - 3.jpg';
+import PCNavBar from '../../../../Navbar/PCNavBar';
 
 const DaranakFalls = () => {
   const [currentImage, setCurrentImage] = useState(DaranakFalls1);
@@ -32,8 +33,9 @@ const DaranakFalls = () => {
   };
 
   return (
-    <div className='w-full min-h-screen'>
-      <div className='w-full flex justify-center items-center relative'>
+    <div className='w-full min-h-screen md:flex'>
+    <PCNavBar></PCNavBar>
+    <div className='w-full md:w-[60%]  flex justify-center items-center relative'>
         {images.length > 1 && (
           <>
             <button
@@ -90,11 +92,12 @@ const DaranakFalls = () => {
           </div>
         )}
       </div>
-      <div className='flex flex-col items-center mt-4'>
-        <h1 className='text-5xl font-bold'>DaranakFalls</h1>
+      <div className='flex flex-col items-center justify-center mt-10 mx-3 md:w-[50%] md:mt-[20%] lg:mt-[5%]'>
+        <h1 className='text-5xl font-bold text-center'>DaranakFalls</h1>
         <div className='flex mt-4 space-x-4'>
           <a
-            href='https://booking-site-url.com' // Replace with the actual booking site URL
+            href='https://www.klook.com/en-PH/activity/56537-tanay-rizal-day-tour-rizal/?aid=825&aff_adid=580752&aff_label1=Tanay%20Rizal%20Day%20Tour%20from%20Manila&aff_label2=Rizal&aff_label3=Philippines&aff_pid=&aff_sid=&utm_medium=affiliate-alwayson&utm_source=non-network&utm_campaign=825&utm_term=&utm_content=&aff_klick_id=41124494115-825-580752-eb6a701
+            ' // Replace with the actual booking site URL
             target='_blank'
             rel='noopener noreferrer'
             className='bg-blue-500 text-white px-4 py-2 rounded-md'
@@ -102,7 +105,7 @@ const DaranakFalls = () => {
             Book Now
           </a>
           <a
-            href='https://waze.com' // Replace with the actual Waze URL
+            href='https://ul.waze.com/ul?place=ChIJExeHvJTrlzMRLSpRYw2CHtQ&ll=14.54400000%2C121.31100000&navigate=yes&utm_campaign=default&utm_source=waze_website&utm_medium=lm_share_location' // Replace with the actual Waze URL
             target='_blank'
             rel='noopener noreferrer'
             className='bg-green-500 text-white px-4 py-2 rounded-md'
@@ -110,7 +113,9 @@ const DaranakFalls = () => {
             Get Directions (Waze)
           </a>
         </div>
-        <p className='mt-[30px]'>Put the short descriptions here</p> 
+        <div className='flex w-80 justify-center items-center mt-[30px]'>
+            <p className='mx-3'>This is a beautiful waterfall with several cascading pools. You can swim in the pools, go for a hike, or just relax and enjoy the scenery.</p> 
+          </div>
       </div>
       
       <RagalaNavbar />
