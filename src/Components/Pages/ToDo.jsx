@@ -21,7 +21,7 @@ const style = {
   heading: `text-3xl font-bold text-center text-gray-800 p-2`,
   form: `flex flex-wrap justify-between mt-4`,
   input: `border p-2 w-full md:w-48 text-xl my-2`,
-  button: `border p-4 ml-2 bg-purple-500 text-slate-100`,
+  button: `border p-4 ml-2 bg-[#6F87BE] text-white`,
   count: `text-center p-2`,
   task: `flex flex-wrap justify-between bg-gray-100 p-4 my-2 capitalize`,
   taskCompleted: `flex flex-wrap justify-between bg-slate-400 p-4 my-2 capitalize`,
@@ -29,6 +29,9 @@ const style = {
   taskText: `ml-2 cursor-pointer`,
   taskTextCompleted: `ml-2 cursor-pointer line-through`,
   deleteButton: `cursor-pointer flex items-center`,
+  priorityHigh: `text-red-600  font-bold`,
+  priorityMedium: `text-orange-600 font-bold`,
+  priorityLow: `text-green-600 font-bold`
 };
 
 const ToDo = () => {
@@ -104,6 +107,14 @@ const ToDo = () => {
   };
 
   const Todo = ({ todo }) => {
+    let priorityColor;
+    if (todo.priority === "high") {
+      priorityColor = style.priorityHigh;
+    } else if (todo.priority === "medium") {
+      priorityColor = style.priorityMedium;
+    } else if (todo.priority === "low") {
+      priorityColor = style.priorityLow;
+    }
     return (
       <li className={todo.completed ? style.taskCompleted : style.task}>
         <div className={style.row}>
@@ -119,12 +130,12 @@ const ToDo = () => {
             >
               {todo.text}
             </p>
-            <p>Category: {todo.category}</p>
-            <p>Priority: {todo.priority}</p>
+            <p><span className='text-[#1D5D9B]'>Category:</span> {todo.category} </p>
+            <p><span className='text-[#1D5D9B]'>Priority:</span> <span className={priorityColor}>{todo.priority}</span></p>
             {todo.dueDate && (
-              <p>Due Date: {new Date(todo.dueDate).toLocaleString()}</p>
+              <p><span className='text-[#1D5D9B]'>Due Date:</span> {new Date(todo.dueDate).toLocaleString()}</p>
             )}
-            {todo.notes && <p>Notes: {todo.notes}</p>}
+            {todo.notes && <p><span className='text-[#1D5D9B]'>Notes:</span>{todo.notes}</p>}
           </div>
         </div>
         <button onClick={() => deleteTodo(todo.id)} className={style.deleteButton}>
@@ -150,7 +161,7 @@ const ToDo = () => {
         <input
           value={category}
           onChange={(e) => setCategory(e.target.value)}
-          className={style.input}
+          className={style.input }
           type='text'
           placeholder='Category'
         />
@@ -159,7 +170,7 @@ const ToDo = () => {
           onChange={(e) => setPriority(e.target.value)}
           className={style.input}
         >
-          <option value='high'>High Priority</option>
+          <option value='high' >High Priority</option>
           <option value='medium'>Medium Priority</option>
           <option value='low'>Low Priority</option>
         </select>

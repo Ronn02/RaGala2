@@ -16,6 +16,20 @@ const PCNavBar = () => {
   const handleNav = () => {
     setNav(!nav);
   };
+  const [dropdownOpen, setDropdownOpen] = useState(false);
+  const [selectedLocation, setSelectedLocation] = useState("Gala");
+  const locations = ["CAVITE", "LAGUNA", "BATANGAS", "RIZAL", "QUEZON"];
+
+  const handleDropdownToggle = () => {
+    setDropdownOpen(!dropdownOpen);
+  };
+
+  const handleLocationSelect = (location) => {
+    setSelectedLocation(location);
+    setDropdownOpen(false);
+    // Navigate to the desired route when "Cavite" is selected
+    
+  };
 
 
   return (
@@ -35,6 +49,39 @@ const PCNavBar = () => {
         <li className="p-4">
           <Link to='/'>Social</Link>
         </li>
+        {/* Dropdown */}
+        <li
+          className="relative p-4 cursor-pointer"
+          onClick={handleDropdownToggle}
+        >
+          {selectedLocation}
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 20 20"
+            fill="currentColor"
+            className="w-6 h-6 inline-block ml-1 text-gray-500"
+          >
+            <path
+              fillRule="evenodd"
+              d="M4.293 6.293a1 1 0 011.414 0L10 10.586l4.293-4.293a1 1 0 111.414 1.414l-5 5a1 1 0 01-1.414 0l-5-5a1 1 0 010-1.414z"
+              clipRule="evenodd"
+            />
+          </svg>
+          {/* Dropdown Content */}
+          {dropdownOpen && (
+            
+            <ul className="absolute top-10 right-0 w-48 bg-white border border-gray-300 rounded-md shadow-md">
+                {locations.map((location) => (
+                  <Link to={`/${location.toLowerCase()}`}>
+                    <li key={location} className="p-2 cursor-pointer hover:bg-gray-100">
+                    {location}
+                    </li>
+                </Link>
+              ))}
+
+            </ul>
+          )}
+        </li>
         <li >
         <Tooltip content="Profile" placement="top">
             <Avatar size="md" src={user?.photoURL || avatar} alt="avatar" className="rounded-full h-[50px] w-[50px]"></Avatar>
@@ -53,6 +100,9 @@ const PCNavBar = () => {
         </li>
         
       </ul></div>
+
+
+      {/* ///////////////////////////////////////////----------------------------------------------// */}
       <div onClick={handleNav} className="block md:hidden  z-10">
         {nav ? (
           <AiOutlineClose size={20} className="PCNavBar-icon fixed right-0 mr-[50px]"  />
@@ -60,13 +110,46 @@ const PCNavBar = () => {
           <AiOutlineMenu size={20} className="PCNavBar-icon fixed right-0 mr-[50px]" />
         )}
       </div>
-      <div className={nav ? 'fixed left-0 top-0 w-[60%] h-full border-r z-10 border-r-gray-900 bg-[#FBE470] text-black ease-in-out duration-500' : 'fixed left-[-100%]'}>
+      <div className={nav ? 'fixed md:hidden left-0 top-0 w-[60%] h-full border-r z-10 border-r-gray-900 bg-[#FBE470] text-black ease-in-out duration-500' : 'fixed left-[-100%]'}>
         <img src={Logo} alt="" className="h-[100px] m-4" />
         <ul className="uppercase p-4">
         <li>
         <Tooltip content="Profile" placement="top">
-            <Avatar size="md" src={user?.photoURL || avatar} alt="avatar" className="rounded-full h-[50px] w-[50px]"></Avatar>
+            <Avatar size="md" src={user?.photoURL || avatar} alt="avatar" className="rounded-full h-[50px] w-[50px] ml-[40%]"></Avatar>
           </Tooltip>
+        </li>
+         {/* Dropdown */}
+         <li
+          className="relative p-4 cursor-pointer"
+          onClick={handleDropdownToggle}
+        >
+          {selectedLocation}
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 20 20"
+            fill="currentColor"
+            className="w-6 h-6 inline-block ml-1 text-gray-500"
+          >
+            <path
+              fillRule="evenodd"
+              d="M4.293 6.293a1 1 0 011.414 0L10 10.586l4.293-4.293a1 1 0 111.414 1.414l-5 5a1 1 0 01-1.414 0l-5-5a1 1 0 010-1.414z"
+              clipRule="evenodd"
+            />
+          </svg>
+          {/* Dropdown Content */}
+          {dropdownOpen && (
+            
+            <ul className="absolute top-20 right-0 w-48 bg-white border border-gray-300 rounded-md shadow-md">
+                {locations.map((location) => (
+                  <Link to={`/${location.toLowerCase()}`}>
+                    <li key={location} className="p-2 cursor-pointer hover:bg-gray-100">
+                    {location}
+                    </li>
+                </Link>
+              ))}
+
+            </ul>
+          )}
         </li>
           <li className="p-4 border-b border-gray-600">
             <Link to='/ragalahome'>Home</Link>
@@ -80,6 +163,7 @@ const PCNavBar = () => {
           <li className="p-4">
             <Link to='/'>Social</Link>
           </li>
+          
           <li className="p-4">
       <div className="mx-4 flex items-center" onClick={signOutUser}>
 
@@ -91,6 +175,7 @@ const PCNavBar = () => {
         </div>
         </div>
         </li>
+        
         
           
         </ul>

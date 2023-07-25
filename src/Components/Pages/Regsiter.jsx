@@ -14,6 +14,8 @@ import * as Yup from "yup";
 import ClipLoader from "react-spinners/ClipLoader";
 import { AuthContext } from "../AppContext/AppContext";
 import { auth, onAuthStateChanged } from "../firebase/firebase";
+import logo from '../../assets/otherAssets/logo2.png'
+
 
 const Regsiter = () => {
   const [loading, setLoading] = useState(false);
@@ -67,16 +69,17 @@ const Regsiter = () => {
   return (
     <>
       {loading ? (
-        <div className="grid grid-cols-1 justify-items-center items-center h-screen">
+        <div className="grid grid-cols-1 justify-items-center items-center h-screen bg-[#FBE470]">
           <ClipLoader color="#367fd6" size={150} speedMultiplier={0.5} />
         </div>
       ) : (
-        <div className="grid grid-cols-1 justify-items-center items-center h-screen">
+        <div className="flex flex-col min-h-screen justify-center items-center  bg-[#FBE470]">
+          <img src={logo} alt=""  className="h-[200px] "/>
           <Card className="w-96">
             <CardHeader
-              variant="gradient"
-              color="blue"
-              className="mb-4 grid h-28 place-items-center"
+              
+              
+              className="mb-4 grid h-28 place-items-center bg-[#1D5D9B] "
             >
               <Typography variant="h3" color="white">
                 REGISTER
@@ -133,10 +136,10 @@ const Regsiter = () => {
                   )}
                 </div>
                 <Button
-                  variant="gradient"
+                  
                   fullWidth
                   type="submit"
-                  className="mb-4"
+                  className='bg-[#1D5D9B] mb-4'
                 >
                   Register
                 </Button>
