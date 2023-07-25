@@ -3,6 +3,8 @@ import RagalaNavbar from '../../../../Navbar/RagalaNavbar';
 import ThePonceFarm1 from '../../../../../assets/destination/QUEZON/THE PONCE FARM/The Ponce Farm2.png';
 import ThePonceFarm2 from '../../../../../assets/destination/QUEZON/THE PONCE FARM/The Ponce Farm3.png';
 import ThePonceFarm3 from '../../../../../assets/destination/QUEZON/THE PONCE FARM/The Ponce Farm4.png';
+import PCNavBar from '../../../../Navbar/PCNavBar';
+
 
 const ThePonceFarm = () => {
   const [currentImage, setCurrentImage] = useState(ThePonceFarm1);
@@ -32,7 +34,8 @@ const ThePonceFarm = () => {
   };
 
   return (
-    <div className='w-full min-h-screen'>
+    <div className='w-full min-h-screen md:flex' /* additional css*/ >
+      <PCNavBar></PCNavBar>
       <div className='w-full flex justify-center items-center relative'>
         {images.length > 1 && (
           <>
@@ -90,8 +93,8 @@ const ThePonceFarm = () => {
           </div>
         )}
       </div>
-      <div className='flex flex-col items-center mt-4'>
-        <h1 className='text-5xl font-bold'>ThePonceFarm</h1>
+      <div className='flex flex-col items-center justify-center mt-10 mx-3 md:w-[50%] md:mt-[20%] lg:mt-[5%]'>
+        <h1 className='text-5xl font-bold text-center'>ThePonceFarm</h1>
         <div className='flex mt-4 space-x-4'>
           <a
             href='https://booking-site-url.com' // Replace with the actual booking site URL
@@ -110,7 +113,9 @@ const ThePonceFarm = () => {
             Get Directions (Waze)
           </a>
         </div>
-        <p className='mt-[30px]'>Put the short descriptions here</p> 
+        <div className='flex w-80 justify-center items-center mt-[30px]'>
+            <p className='mx-3'>Put the short descriptions here</p> 
+        </div>
       </div>
       
       <RagalaNavbar />

@@ -92,8 +92,8 @@ const QuezonPremierHotel = () => {
           </div>
         )}
       </div>
-      <div className='flex flex-col items-center mt-4'>
-        <h1 className='text-5xl font-bold'>QuezonPremierHotel</h1>
+      <div className='flex flex-col items-center justify-center mt-10 mx-3 md:w-[50%] md:mt-[20%] lg:mt-[5%]'>
+        <h1 className='text-5xl font-bold text-center'>Quezon Premier Hotel</h1>
         <div className='flex mt-4 space-x-4'>
           <a
             href='https://booking-site-url.com' // Replace with the actual booking site URL
@@ -112,7 +112,9 @@ const QuezonPremierHotel = () => {
             Get Directions (Waze)
           </a>
         </div>
-        <p className='mt-[30px]'>Put the short descriptions here</p> 
+        <div className='flex w-80 justify-center items-center mt-[30px]'>
+            <p className='mx-3'>Put the short descriptions here</p> 
+        </div>    
       </div>
       
       <RagalaNavbar />
