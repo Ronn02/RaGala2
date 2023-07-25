@@ -39,7 +39,7 @@ import PostCard from "./PostCard";
 const Main = () => {
   const { user, userData } = useContext(AuthContext);
   const text = useRef("");
-  const scrollRef = useRef("");
+ 
   const [image, setImage] = useState(null);
   const [file, setFile] = useState(null);
   const collectionRef = collection(db, "posts");
