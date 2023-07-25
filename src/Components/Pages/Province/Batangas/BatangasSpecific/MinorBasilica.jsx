@@ -3,6 +3,7 @@ import RagalaNavbar from '../../../../Navbar/RagalaNavbar';
 import MinorBasilica1 from '../../../../../assets/destination/BATANGAS/MINOR BASILICA OF ST. MARTIN OF TOURS/TAAL BASILICA, BATANGAS - 1.jpg';
 import MinorBasilica2 from '../../../../../assets/destination/BATANGAS/MINOR BASILICA OF ST. MARTIN OF TOURS/TAAL BASILICA, BATANGAS - 3.jpg';
 import MinorBasilica3 from '../../../../../assets/destination/BATANGAS/MINOR BASILICA OF ST. MARTIN OF TOURS/TAAL BASILICA, BATANGAS - 4.jpg';
+import PCNavBar from '../../../../Navbar/PCNavBar';
 
 const MinorBasilica = () => {
   const [currentImage, setCurrentImage] = useState(MinorBasilica1);
@@ -32,7 +33,8 @@ const MinorBasilica = () => {
   };
 
   return (
-    <div className='w-full min-h-screen'>
+    <div className='w-full min-h-screen md:flex'>
+      <PCNavBar></PCNavBar>
       <div className='w-full flex justify-center items-center relative'>
         {images.length > 1 && (
           <>
@@ -90,11 +92,11 @@ const MinorBasilica = () => {
           </div>
         )}
       </div>
-      <div className='flex flex-col items-center mt-4'>
-        <h1 className='text-5xl font-bold'>MinorBasilica</h1>
+      <div className='flex flex-col items-center justify-center mt-10 mx-3 md:w-[50%] md:mt-[20%] lg:mt-[15%]'/*changed */> 
+        <h1 className='text-5xl font-bold'>Minor Basilica OF St. Martin of Tours</h1>
         <div className='flex mt-4 space-x-4'>
           <a
-            href='https://booking-site-url.com' // Replace with the actual booking site URL
+            href='https://www.klook.com/en-PH/hotels/detail/34229-paradores-del-castillo/?spm=HotelAPI_HotelListing.ListingHotel_LIST&clickId=fa8061315d' // booking site URL
             target='_blank'
             rel='noopener noreferrer'
             className='bg-blue-500 text-white px-4 py-2 rounded-md'
@@ -102,7 +104,7 @@ const MinorBasilica = () => {
             Book Now
           </a>
           <a
-            href='https://waze.com' // Replace with the actual Waze URL
+            href='https://www.waze.com/live-map/directions/ph/calabarzon/taal/minor-basilica-of-st.-martin-of-tours?to=place.ChIJuWlaaiQKvTMRW-9LVy1hb94' // Replace with the actual Waze URL
             target='_blank'
             rel='noopener noreferrer'
             className='bg-green-500 text-white px-4 py-2 rounded-md'
@@ -110,7 +112,9 @@ const MinorBasilica = () => {
             Get Directions (Waze)
           </a>
         </div>
-        <p className='mt-[30px]'>Put the short descriptions here</p> 
+        <div className='flex w-80 justify-center items-center mt-[30px]' /*added some css*/>
+            <p className='mx-3'>Nestled in the heart of Batangas City, Philippines, the Minor Basilica stands as a symbol of faith, history, and architectural brilliance. Officially known as the Minor Basilica of the Immaculate Conception, this religious sanctuary holds great significance for the local Catholic community and attracts visitors from all walks of life who seek a deeper spiritual connection and an appreciation for cultural heritage.</p> 
+      </div>
       </div>
       
       <RagalaNavbar />
