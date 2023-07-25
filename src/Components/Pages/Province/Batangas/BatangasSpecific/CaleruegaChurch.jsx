@@ -35,7 +35,7 @@ const CaleruegaChurch = () => {
   return (
     <div className='w-full min-h-screen md:flex'>
       <PCNavBar></PCNavBar>
-      <div className='w-full md:w-[50%] flex justify-center items-center relative'>
+      <div className='w-full md:w-[50%]  flex justify-center items-center relative'>
         {images.length > 1 && (
           <>
             <button
@@ -53,7 +53,7 @@ const CaleruegaChurch = () => {
           </>
         )}
         <img
-          className='w-[400px] h-[300px] cursor-pointer'
+          className='w-[400px] md:w-[100vh]  md:h-[100vh] h-[300px]  cursor-pointer'
           src={currentImage}
           alt=""
           onClick={() => handleImageClick(currentImage)}
