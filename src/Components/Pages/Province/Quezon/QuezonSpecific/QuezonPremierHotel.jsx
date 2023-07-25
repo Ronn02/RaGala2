@@ -3,6 +3,7 @@ import RagalaNavbar from '../../../../Navbar/RagalaNavbar';
 import QuezonPremierHotel1 from '../../../../../assets/destination/QUEZON/Quezon Premier Hotel Lucena/Quezon Premier Hotel Lucena2.webp';
 import QuezonPremierHotel2 from '../../../../../assets/destination/QUEZON/Quezon Premier Hotel Lucena/Quezon Premier Hotel Lucena3.webp';
 import QuezonPremierHotel3 from '../../../../../assets/destination/QUEZON/Quezon Premier Hotel Lucena/Quezon Premier Hotel Lucena4.webp';
+import PCNavBar from '../../../../Navbar/PCNavBar';
 
 const QuezonPremierHotel = () => {
   const [currentImage, setCurrentImage] = useState(QuezonPremierHotel1);
@@ -32,7 +33,8 @@ const QuezonPremierHotel = () => {
   };
 
   return (
-    <div className='w-full min-h-screen'>
+    <div className='w-full min-h-screen md:flex' /* additional css*/ >
+      <PCNavBar></PCNavBar>
       <div className='w-full flex justify-center items-center relative'>
         {images.length > 1 && (
           <>
@@ -51,7 +53,7 @@ const QuezonPremierHotel = () => {
           </>
         )}
         <img
-          className='w-[400px] h-[300px] cursor-pointer'
+          className='w-[400px] md:w-[100vh]  md:h-[100vh] h-[300px]  cursor-pointer'
           src={currentImage}
           alt=""
           onClick={() => handleImageClick(currentImage)}

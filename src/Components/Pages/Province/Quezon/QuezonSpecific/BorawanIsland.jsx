@@ -3,6 +3,7 @@ import RagalaNavbar from '../../../../Navbar/RagalaNavbar';
 import BorawanIsland1 from '../../../../../assets/destination/QUEZON/BORAWAN ISLAND/BORAWAN ISLAND2.webp';
 import BorawanIsland2 from '../../../../../assets/destination/QUEZON/BORAWAN ISLAND/BORAWAN ISLAND3.webp';
 import BorawanIsland3 from '../../../../../assets/destination/QUEZON/BORAWAN ISLAND/BORAWAN ISLAND4.webp';
+import PCNavBar from '../../../../Navbar/PCNavBar';
 
 const BorawanIsland = () => {
   const [currentImage, setCurrentImage] = useState(BorawanIsland1);
@@ -32,8 +33,9 @@ const BorawanIsland = () => {
   };
 
   return (
-    <div className='w-full min-h-screen'>
-      <div className='w-full flex justify-center items-center relative'>
+    <div className='w-full min-h-screen md:flex'>
+      <PCNavBar></PCNavBar>
+      <div className='w-full md:w-[50%] flex justify-center items-center relative'>
         {images.length > 1 && (
           <>
             <button
@@ -51,7 +53,7 @@ const BorawanIsland = () => {
           </>
         )}
         <img
-          className='w-[400px] h-[300px] cursor-pointer'
+          className='w-[400px] md:w-[100vh]  md:h-[100vh] h-[300px]  cursor-pointer'
           src={currentImage}
           alt=""
           onClick={() => handleImageClick(currentImage)}
@@ -90,11 +92,11 @@ const BorawanIsland = () => {
           </div>
         )}
       </div>
-      <div className='flex flex-col items-center mt-4'>
-        <h1 className='text-5xl font-bold'>BorawanIsland</h1>
+      <div className='flex bg-yellow-100 flex-col items-center justify-center mt-10 mx-3 md:w-[50%] md:mt-[10%] lg:mt-[10%]'/*changed */> 
+        <h1 className='text-5xl font-bold'>Borawan Island</h1>
         <div className='flex mt-4 space-x-4'>
           <a
-            href='https://booking-site-url.com' // Replace with the actual booking site URL
+            href='https://www.klook.com/en-PH/hotels/detail/639057-borawan-island-resort-by-cocotel/?check_in=2023-07-20&check_out=2023-07-21&room_num=1&adult_num=2&child_num=0&age=&page_source=hotel_list_page&server_data=81124443136e8db398c4150149cf9cb8d4dedc53c9bbb42d49c1a50a09d21a817cb7c59d7ef56dabe0f5c3c098a031f0176e4c7be10db6b3257d24e8d3ced39c0595fecccfd31cb7f9e1256a95ca3682c40dfd9c44da728ef31f43dd57fe7804&source_price_token=eyJjdXJyZW5jeSI6IlBIUCIsInByaWNlIjo2NTIwLjIsInNvdXJjZSI6MX0%3D&is_suggest_time=1' // Replace with the actual booking site URL
             target='_blank'
             rel='noopener noreferrer'
             className='bg-blue-500 text-white px-4 py-2 rounded-md'
@@ -102,7 +104,7 @@ const BorawanIsland = () => {
             Book Now
           </a>
           <a
-            href='https://waze.com' // Replace with the actual Waze URL
+            href='https://ul.waze.com/ul?preview_venue_id=79298707.793249217.8568004&navigate=yes&utm_campaign=default&utm_source=waze_website&utm_medium=lm_share_location' // Replace with the actual Waze URL
             target='_blank'
             rel='noopener noreferrer'
             className='bg-green-500 text-white px-4 py-2 rounded-md'
@@ -110,7 +112,9 @@ const BorawanIsland = () => {
             Get Directions (Waze)
           </a>
         </div>
-        <p className='mt-[30px]'>Put the short descriptions here</p> 
+        <div className='flex bg-red-300 justify-center mx-4 items-center mt-[30px]' /*added some css*/>
+            <p className='mx-3'>Welcome to Borawan, a hidden gem nestled in the tropical paradise of Quezon Province, Philippines. Known for its stunning beauty and unique landscape, Borawan offers a perfect blend of the famous Boracay and Palawan, hence its name. Whether you seek relaxation on powdery beaches or an adventure amidst rugged rock formations, Borawan promises an unforgettable experience that will leave you enchanted and rejuvenated.</p> 
+        </div>
       </div>
       
       <RagalaNavbar />
