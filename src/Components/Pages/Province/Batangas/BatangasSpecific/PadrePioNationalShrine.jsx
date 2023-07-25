@@ -92,7 +92,7 @@ const PadrePioNationalShrine = () => {
           </div>
         )}
       </div>
-      <div className='flex flex-col items-center md:mt-[20%] bg-green'>
+      <div className='flex flex-col items-center md:mt-[20%] mt-4'>
         <h1 className='text-5xl font-bold'>Padre Pio National Shrine</h1>
         <div className='flex mt-4 space-x-4'>
           <a
@@ -104,6 +104,7 @@ const PadrePioNationalShrine = () => {
             Book Now
           </a>
           <a
+
             href='https://www.waze.com/live-map/directions/parish-and-national-shrine-of-saint-padre-pio-santo-tomas-lipa-rd-santo-tomas?to=place.w.79429773.794166656.4070823' // Replace with the actual Waze URL
             target='_blank'
             rel='noopener noreferrer'
