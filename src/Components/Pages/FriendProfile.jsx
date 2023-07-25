@@ -9,6 +9,7 @@ import avatar from "../../assets/images/avatar.jpg";
 import { collection, where, query, onSnapshot } from "firebase/firestore";
 import { db } from "../firebase/firebase";
 import { useParams } from "react-router-dom";
+import PCNavBar from '../Navbar/PCNavBar';
 
 const FriendProfile = () => {
   const { id } = useParams();
@@ -27,15 +28,14 @@ const FriendProfile = () => {
 
   return (
     <div className="w-full">
-      <div className="fixed top-0 z-10 w-full bg-white">
-        <Navbar></Navbar>
-      </div>
+      <PCNavBar></PCNavBar>
       <div className="flex bg-gray-100">
-        <div className="flex-auto w-[20%] fixed top-12">
+        <div className=" hidden md:block md:flex-auto w-[20%] fixed mt-[10px]">
+        
           <LeftSide></LeftSide>
         </div>
-        <div className="flex-auto w-[60%] absolute left-[20%] top-14 bg-gray-100 rounded-xl">
-          <div className="w-[80%] mx-auto">
+        <div className="flex-auto w-full md:w-[60%] absolute md:left-[20%] p-[20px] md:p-0 bg-gray-100 rounded-xl">
+          <div className="w-full md:w-[80%] mx-auto mt-[10px]">
             <div>
               <div className="relative py-4">
                 <img
@@ -80,7 +80,7 @@ const FriendProfile = () => {
                     </svg>
 
                     <span className="ml-2 py-2 font-roboto font-medium text-sm text-white no-underline tracking-normal leading-none">
-                      From Tokyo, Japan
+                      Philippines
                     </span>
                   </div>
                   <div className="flex items-center">
@@ -100,7 +100,7 @@ const FriendProfile = () => {
                     </svg>
 
                     <span className="ml-2 py-2 font-roboto font-medium text-sm text-white no-underline tracking-normal leading-none">
-                      Lives in New York
+                      Lives in Philippines
                     </span>
                   </div>
                 </div>
@@ -109,7 +109,7 @@ const FriendProfile = () => {
             <Main></Main>
           </div>
         </div>
-        <div className="flex-auto w-[20%] fixed right-0 top-12">
+        <div className="hidden md:block md:flex-auto w-[20%] fixed right-0 mt-[10px]">
           <RightSide></RightSide>
         </div>
       </div>

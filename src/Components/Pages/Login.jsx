@@ -65,11 +65,11 @@ const Login = () => {
   return (
     <>
       {loading ? (
-        <div className="grid grid-cols-1 justify-items-center items-center h-screen">
+        <div className="grid grid-cols-1 justify-items-center items-center h-screen bg-[#FBE470]">
           <ClipLoader color="#367fd6" size={150} speedMultiplier={0.5} />
         </div>
       ) : (
-        <div className="grid grid-cols-1 h-screen justify-items-center items-center">
+        <div className="grid grid-cols-1 h-screen justify-items-center items-center bg-[#FBE470]">
           <Card className="w-96">
             <CardHeader
               variant="gradient"
