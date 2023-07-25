@@ -21,7 +21,7 @@ const PCNavBar = () => {
   return (
     <div className="flex justify-between items-center h-24 max-w-full  text-black">
       <div className=" flex justify-between items-center bg-[#FBE470] z-10 h-[100px] w-full fixed">
-      <img src={Logo} alt="" className="h-[150px]" />
+      <Link to='/ragalahome'><img src={Logo} alt="" className="h-[150px]" /></Link>
       <ul className="hidden md:flex mr-[60px]">
         <li className="p-4">
           <Link to='/ragalahome'>Home</Link>
@@ -69,7 +69,7 @@ const PCNavBar = () => {
           </Tooltip>
         </li>
           <li className="p-4 border-b border-gray-600">
-            <Link>Home</Link>
+            <Link to='/ragalahome'>Home</Link>
           </li>
           <li className="p-4 border-b border-gray-600">
             <Link to='/todo'>To Do</Link>
