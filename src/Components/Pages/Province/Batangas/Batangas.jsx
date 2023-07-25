@@ -33,13 +33,15 @@ const Batangas = () => {
             
         <div className='w-full h-3/4 flex flex-col justify-center items-center mb-[100px]'>
              
-                <div className='h-full mx-2 justify-center items-center flexc mt-[100px]'>
-                    <h2 id='places' className=' text-[#6F87BE] italic text-center font-semibold mb-4text-xl md:text-2xl'>Welcome to Batangas: Where History and Nature Unite!</h2>
+                <div id='places' className='h-full w-3/4 mx-2 flex mt-[100px] justify-center bg-green-200'>
+                    <p className='flex ml-3 my-2 text-2xl md:justify-start md:items-start md:text-start'> Explore </p>
+                    <div className='flex bg-pink-200'>
+                        <h2  className=' text-[#6F87BE] italic text-center mt-10 md:text-right font-semibold mb-4 text-xl md:text-2xl'>Welcome to Batangas: Where History and Nature Unite!</h2>
+                    </div>
+                    
                 </div>
-           
-                <p className='ml-3 my-2 text-2xl'> Explore </p>
-                
-                <div className='flex-col mx-3'>
+                <hr></hr>
+                <div className='flex-col mx-3 mt-5'>
                     
                     <div className='flex'>
                         <Link to='/caleruegachurch'><div className='relative h-[200px] w-[150px]  md:h-[300px] md:w-[400px] pr-1 flex'>
