@@ -16,6 +16,20 @@ const PCNavBar = () => {
   const handleNav = () => {
     setNav(!nav);
   };
+  const [dropdownOpen, setDropdownOpen] = useState(false);
+  const [selectedLocation, setSelectedLocation] = useState("Gala");
+  const locations = ["CAVITE", "LAGUNA", "BATANGAS", "RIZAL", "QUEZON"];
+
+  const handleDropdownToggle = () => {
+    setDropdownOpen(!dropdownOpen);
+  };
+
+  const handleLocationSelect = (location) => {
+    setSelectedLocation(location);
+    setDropdownOpen(false);
+    // Navigate to the desired route when "Cavite" is selected
+    
+  };
 
 
   return (
@@ -34,6 +48,36 @@ const PCNavBar = () => {
         </li>
         <li className="p-4">
           <Link to='/'>Social</Link>
+        </li>
+        {/* Dropdown */}
+        <li
+          className="relative p-4 cursor-pointer"
+          onClick={handleDropdownToggle}
+        >
+          {selectedLocation}
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 20 20"
+            fill="currentColor"
+            className="w-6 h-6 inline-block ml-1 text-gray-500"
+          >
+            <path
+              fillRule="evenodd"
+              d="M4.293 6.293a1 1 0 011.414 0L10 10.586l4.293-4.293a1 1 0 111.414 1.414l-5 5a1 1 0 01-1.414 0l-5-5a1 1 0 010-1.414z"
+              clipRule="evenodd"
+            />
+          </svg>
+          {/* Dropdown Content */}
+          {dropdownOpen && (
+            <ul className="absolute top-10 right-0 w-48 bg-white border border-gray-300 rounded-md shadow-md">
+                {locations.map((location) => (
+                <li key={location} className="p-2 cursor-pointer hover:bg-gray-100">
+                  <Link to={`/${location.toLowerCase()}`}>{location}</Link>
+                </li>
+              ))}
+
+            </ul>
+          )}
         </li>
         <li >
         <Tooltip content="Profile" placement="top">
