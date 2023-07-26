@@ -25,7 +25,7 @@ const Quezon = () => {
         <div id='places' className='h-full w-3/4 mx-2 flex flex-col mt-[100px]'>
             <div className='ml-[150px] my-2 text-2xl md:justify-start md:items-start md:text-start'> Explore </div>
             <div className='flex-growflex justify-end items-end'>
-                <h2 className='text-[#6F87BE] italic text-center md:text-right font-semibold text-xl md:text-2xl'>
+                <h2 className='text-[#6F87BE] italic text-center md:text-right font-semibold text-xl md:text-2xl md:mr-[150px]' >
                 Where Nature's Beauty and Cultural Riches Converge!
                 </h2>
             </div>
